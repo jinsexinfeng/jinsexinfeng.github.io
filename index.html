@@ -33,6 +33,10 @@
       background-color: #F3F6FB;
     }
 
+    body.modal-open {
+      overflow-y: auto !important;        
+      padding-right: 0 !important;
+    }
     .text-my{
       color: #272343;
     }
@@ -66,6 +70,18 @@
       margin-top: 30px;
       margin-bottom: 30px;
     }
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 5px rgb(0 0 0 / 20%);
+      background: #ededed;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #386783;
+      background-image: -webkit-linear-gradient(45deg,hsla(0,0%,100%,.2) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.2) 0,hsla(0,0%,100%,.2) 75%,transparent 0,transparent);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
   </style>
 </head>
 
@@ -86,7 +102,7 @@
               <a class="dropdown-item" href="#jsxf-1">自我介绍</a> <a class="dropdown-item" href="#jsxf-2">兴趣爱好</a> <a class="dropdown-item"
                 href="#jsxf-3">擅长软件</a> <a class="dropdown-item" href="#jsxf-4">个人荣誉</a> </div>
           </li>
-          <li class="nav-item"> <a class="nav-link" href="#">文档</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">文档</a></li>
         </ul>
         <ul class="navbar-nav ml-auto d-flex align-items-center">
           <li class="nav-item">
@@ -122,8 +138,9 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title text-body" id="ModalLabel-Contact">联系方式</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
-                      aria-hidden="true">&times;</span> </button>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+                    <span aria-hidden="true">&times;</span> 
+                  </button>
                 </div>
                 <div class="modal-body text-body">
                   <!-- 其他网站 -->
@@ -524,46 +541,46 @@
       </div>
     </div>
     <!--
-  <h2>Fun Facts</h2>
-  <div class="row text-center">
-    <div class="col-6 col-lg-3">
-      <div class="card"> <img class="card-img-top" src="images/N1.png" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">300+</h1>
-          <p class="card-text">微信和QQ好友</p>
-          <br>
+      <h2>Fun Facts</h2>
+      <div class="row text-center">
+        <div class="col-6 col-lg-3">
+          <div class="card"> <img class="card-img-top" src="images/N1.png" alt="Card image cap">
+            <div class="card-body">
+              <h1 class="card-title">300+</h1>
+              <p class="card-text">微信和QQ好友</p>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card"> <img class="card-img-top" src="images/N2.png" alt="Card image cap">
+            <div class="card-body">
+              <h1 class="card-title">1k+</h1>
+              <p class="card-text">开心时光</p>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card"> <img class="card-img-top" src="images/N3.png" alt="Card image cap">
+            <div class="card-body">
+              <h1 class="card-title">100+</h1>
+              <p class="card-text">荣誉</p>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card"> <img class="card-img-top" src="images/N4.png" alt="Card image cap">
+            <div class="card-body">
+              <h1 class="card-title">900+</h1>
+              <p class="card-text">练习</p>
+              <br>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-6">
-      <div class="card"> <img class="card-img-top" src="images/N2.png" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">1k+</h1>
-          <p class="card-text">开心时光</p>
-          <br>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-6">
-      <div class="card"> <img class="card-img-top" src="images/N3.png" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">100+</h1>
-          <p class="card-text">荣誉</p>
-          <br>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-6">
-      <div class="card"> <img class="card-img-top" src="images/N4.png" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">900+</h1>
-          <p class="card-text">练习</p>
-          <br>
-        </div>
-      </div>
-    </div>
-  </div>
--->
+    -->
     <!--
       <hr>
       <h2>Contact</h2>
@@ -621,24 +638,26 @@
     </style>
   </noscript>
   <script>
+    // 进入动画
     AOS.init({
       duration: 800
     });
   </script>
 
-
   <script src="js/bootstrap-4.4.1.js"></script>
   <script>
+    // 导航改色
     jQuery(document).ready(function () {
 
       $(window).scroll(function () {
-        $('.topnav').toggleClass('bg-light navbar-light shadow-sm scrollednav py-0', $(this).scrollTop() > 50);
+        $('.topnav').toggleClass('bg-light navbar-light shadow-sm scrollednav py-0', $(this).scrollTop() >= 50);
         $('.topnav').toggleClass('bg-my navbar-dark', $(this).scrollTop() < 50);
       });
 
     });
   </script>
   <script>
+    // 每日一句
     fetch('https://v1.hitokoto.cn')
       .then(response => response.json())
       .then(data => {
@@ -648,6 +667,7 @@
       })
       .catch(console.error)
   </script>
+  
 </body>
 
 </html>
