@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>人生答卷</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: url('../IMG/background1.jpg');
+			background-attachment: fixed
+		}
+
+		hr {
+			color: #9aa2a5;
+			margin: 10px 0;
+		}
+
+		fieldset {
+			border: none;
+		}
+
+		.outer {
+			margin: 40px auto;
+			background-color: #fff;
+			width: 80%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+			border-radius: 10px;
+		}
+
+		.inner {
+			margin: 0 auto;
+			background-color: #fff;
+			width: 100%;
+		}
+
+		.title h2 {
+			text-align: center;
+			padding: 10px;
+			color: #129fcf;
+			padding-top: 40px;
+		}
+
+		.detail {
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		.detail a {
+			text-decoration: none;
+			color: #129fcf;
+		}
+
+		.info {
+			margin: 0 auto;
+			width: 614px;
+		}
+
+		.info h3 {
+			margin: 20px 0;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+
+		.info label {
+			font-weight: bolder;
+			font-size: 18px;
+		}
+
+		.info_inp {
+			border: 0;
+			line-height: 30px;
+			width: 200px;
+			background-color: transparent;
+			font-family: '华文楷体';
+		}
+
+		.text input {
+			margin-top: 10px;
+			margin-left: 50px;
+		}
+
+
+		.btn-outer {
+			text-align:center;
+			width: 400px;
+			margin: 0 auto;
+		}
+
+		#btn1,
+		#btn2 {
+			background: #129fcf;
+			color: white;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			padding: 13px 38px;
+			font-size: 24px;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-radius: 100px;
+		}
+
+		
+
+
+		.outaa{
+			border: 0;
+			line-height: 30px;
+			width: 100%;
+			background-color: transparent;
+			font-size: 30px;
+			text-align:center;
+		}
+		input[type=radio] {
+			border: 0px;
+			width: 30px;
+			height: 1.8em;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="outer">
+		<div class="inner">
+			<div class="title">
+				<h2 style="font-size: 50px;">人生答卷</h2>
+			</div>
+			<div class="text">
+				<fieldset class="question" style="font-size: 28px;line-height: 2em;">
+					<input type="radio" name="1A" value="学业">A. 学业
+					<br>
+					<input type="radio" name="1A" value="事业">B. 事业
+					<br>
+					<input type="radio" name="1A" value="爱情">C. 爱情
+					<br>
+					<input type="radio" name="1A" value="财富">D. 财富
+					<br>
+					<input type="radio" name="1A" value="权利">F. 权利
+					<br>
+				</fieldset>
+				
+				<br>
+				<div class="btn-outer">
+					<button id="btn2" onclick="coreCount()">交卷</button>
+				</div>
+
+			</div>
+			<br>
+			<input id="out" type="text" class="outaa" name="name">
+			<br>
+			<br>
+			<input id="out2" type="text" class="outaa" name="name" style="color:red;font-size: 50px;">
+			<br>
+			<br>
+			<br>
+		</div>
+
+	</div>
+
+
+</body>
+
+<script>
+	function coreCount() {
+		document.getElementById("out").value = "恭喜，您已提交答案:"
+		var dr=document.getElementsByName("1A"); 
+		for(i=0;i<dr.length;i++){ 
+			if(dr[i].checked){ 
+				document.getElementById("out2").value = dr[i].value; 
+				break; 
+			} 
+		} 
+
+	}
+	
+
+</script>
+
+</html>
