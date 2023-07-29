@@ -34,11 +34,11 @@
       })();
     </script>
     <style>
-      :root{
-        --my-bg-color:#f3f6fb;
-        --my-text-color:#272343;
-        --my-color2:#386783;
-        --my-color1:#66aab1;
+      :root {
+        --my-bg-color: #f3f6fb;
+        --my-text-color: #272343;
+        --my-color2: #386783;
+        --my-color1: #66aab1;
       }
 
       html,
@@ -51,17 +51,17 @@
       }
 
       .bg-my {
-        background-color:  var(--my-color2);
+        background-color: var(--my-color2);
       }
 
       .bg-my2 {
         background-color: var(--my-color1);
       }
 
-      .border-my{
+      .border-my {
         border-color: var(--my-color1) !important;
       }
-      
+
       .dropdown-menu > .dropdown-item:active {
         background-color: var(--my-color2);
       }
@@ -114,7 +114,10 @@
 
   <body style="overflow-x: hidden">
     <!-- navbar -->
-    <header class="topnav navbar navbar-expand-lg navbar-dark bg-my fixed-top">
+    <header
+      class="topnav navbar navbar-expand-lg navbar-dark bg-my"
+      style="z-index: 1030"
+    >
       <a class="navbar-brand" href="index.html">
         <strong>金色信封</strong>的网站
       </a>
@@ -385,7 +388,7 @@
     >
       <path
         d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"
-        fill=var(--my-color2)
+        fill="var(--my-color2)"
       />
     </svg>
     <div class="container">
@@ -487,7 +490,7 @@
           width="1440"
           height="30"
           transform="translate(0 30)"
-          fill=var(--my-color1)
+          fill="var(--my-color1)"
         />
         <rect
           width="1440"
@@ -575,7 +578,7 @@
           width="1440"
           height="30"
           transform="translate(0 30)"
-          fill=var(--my-color1)
+          fill="var(--my-color1)"
         />
         <rect
           width="1440"
@@ -1149,6 +1152,20 @@
             $(this).scrollTop() < 50
           );
         });
+      });
+    </script>
+    <script>
+      //navbar置顶
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        var scrollTop = window.pageYOffset;
+        var windowHeight = window.innerHeight;
+
+        if (scrollTop > 0) {
+          navbar.style.top = scrollTop + "px";
+        } else {
+          navbar.style.top = "0";
+        }
       });
     </script>
     <script>
