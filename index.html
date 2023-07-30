@@ -49,6 +49,19 @@
       .text-my {
         color: var(--my-text-color);
       }
+      .jumbotron-my {
+        padding-bottom: 1rem;
+        background-color: var(--my-color2);
+        color: #fff;
+      }
+      #jumbotroncanvas {
+        width: 100%;
+        height: 20vh;
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+      }
 
       .bg-my {
         background-color: var(--my-color2);
@@ -182,216 +195,207 @@
     </header>
 
     <!-- wavy header -->
-    <div
-      class="bg-my jumbotron jumbotron-lg jumbotron-fluid mb-0 pb-3 position-relative"
-    >
-      <div class="container-fluid text-white h-100">
-        <div
-          class="d-lg-flex align-items-center justify-content-between text-center pl-lg-5"
-        >
-          <div class="col pt-4 pb-4">
-            <h1 class="display-3 MarginLarge" data-aos="zoom-in">金子博</h1>
-            <h5 class="font-weight-light mb-4" data-aos="fade-up">
-              育英🎈2022🎈计算机网络
-            </h5>
-            <h5 class="font-weight-light mb-4" data-aos="fade-up">
-              📢来啦，快关注我！
-            </h5>
+    <div class="jumbotron-my">
+      <div class="jumbotron-fluid">
+        <div class="container-fluid">
+          <div
+            class="d-lg-flex align-items-center justify-content-between text-center pl-lg-5"
+          >
+            <div class="col pt-4 pb-4">
+              <h1 class="display-3 MarginLarge" data-aos="zoom-in">金子博</h1>
+              <h5 class="font-weight-light mb-4" data-aos="fade-up">
+                育英🎈2022🎈计算机网络
+              </h5>
+              <h5 class="font-weight-light mb-4" data-aos="fade-up">
+                📢来啦，快关注我！
+              </h5>
 
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-outline-light rounded-pill btn-lg"
-              data-toggle="modal"
-              data-target="#Modal-Contact"
-              data-aos="fade-up"
-            >
-              联系我
-            </button>
-
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="Modal-Contact"
-              tabindex="-1"
-              aria-labelledby="ModalLabel-Contact-Label"
-              aria-hidden="true"
-            >
-              <div
-                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-outline-light rounded-pill btn-lg"
+                data-toggle="modal"
+                data-target="#Modal-Contact"
+                data-aos="fade-up"
               >
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title text-body" id="ModalLabel-Contact">
-                      联系方式
-                    </h5>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body text-body">
-                    <!-- 其他网站 -->
-                    <div class="row">
-                      <div class="col-4">
-                        <img
-                          src="images/icon/8.png"
-                          height="60"
-                          width="60"
-                          alt="icon"
-                        />
-                      </div>
-                      <div class="col-8">
-                        QQ<br />
-                        3517860006<br />
-                      </div>
-                      <div class="col-4">
-                        <img
-                          src="images/icon/9.png"
-                          height="60"
-                          width="60"
-                          alt="icon"
-                        />
-                      </div>
-                      <div class="col-8">
-                        微信<br />
-                        jinsexinfeng-jzb<br />
-                      </div>
-                      <div class="col-12 text-center">
-                        <div class="collapse" id="collapse-more">
-                          <div class="card card-body">
-                            <div class="row">
-                              <div class="col-6 text-center">
-                                <a
-                                  href="https://weibo.com/3250150087/"
-                                  target="_blank"
-                                >
-                                  <img
-                                    src="images/icon/2.png"
-                                    class="rounded mx-auto d-block"
-                                    height="50"
-                                    width="50"
-                                    alt="icon"
-                                  />
-                                  新浪微博
-                                </a>
-                              </div>
-                              <div class="col-6 text-center">
-                                <a
-                                  href="https://v.douyin.com/JVFHYav/"
-                                  target="_blank"
-                                >
-                                  <img
-                                    src="images/icon/4.png"
-                                    class="rounded mx-auto d-block"
-                                    height="50"
-                                    width="50"
-                                    alt="icon"
-                                  />
-                                  抖音
-                                </a>
-                              </div>
-                              <div class="col-6 text-center">
-                                <a
-                                  href="https://www.coolapk.com/u/1242007"
-                                  target="_blank"
-                                >
-                                  <img
-                                    src="images/icon/5.png"
-                                    class="rounded mx-auto d-block"
-                                    height="50"
-                                    width="50"
-                                    alt="icon"
-                                  />
-                                  酷安
-                                </a>
-                              </div>
-                              <div class="col-6 text-center">
-                                <a
-                                  href="https://github.com/jinsexinfeng"
-                                  target="_blank"
-                                >
-                                  <img
-                                    src="images/icon/6.png"
-                                    class="rounded mx-auto d-block"
-                                    height="50"
-                                    width="50"
-                                    alt="icon"
-                                  />
-                                  Github
-                                </a>
+                联系我
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="Modal-Contact"
+                tabindex="-1"
+                aria-labelledby="ModalLabel-Contact-Label"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-body" id="ModalLabel-Contact">
+                        联系方式
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-body">
+                      <!-- 其他网站 -->
+                      <div class="row">
+                        <div class="col-4">
+                          <img
+                            src="images/icon/8.png"
+                            height="60"
+                            width="60"
+                            alt="icon"
+                          />
+                        </div>
+                        <div class="col-8">
+                          QQ<br />
+                          3517860006<br />
+                        </div>
+                        <div class="col-4">
+                          <img
+                            src="images/icon/9.png"
+                            height="60"
+                            width="60"
+                            alt="icon"
+                          />
+                        </div>
+                        <div class="col-8">
+                          微信<br />
+                          jinsexinfeng-jzb<br />
+                        </div>
+                        <div class="col-12 text-center">
+                          <div class="collapse" id="collapse-more">
+                            <div class="card card-body">
+                              <div class="row">
+                                <div class="col-6 text-center">
+                                  <a
+                                    href="https://weibo.com/3250150087/"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="images/icon/2.png"
+                                      class="rounded mx-auto d-block"
+                                      height="50"
+                                      width="50"
+                                      alt="icon"
+                                    />
+                                    新浪微博
+                                  </a>
+                                </div>
+                                <div class="col-6 text-center">
+                                  <a
+                                    href="https://v.douyin.com/JVFHYav/"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="images/icon/4.png"
+                                      class="rounded mx-auto d-block"
+                                      height="50"
+                                      width="50"
+                                      alt="icon"
+                                    />
+                                    抖音
+                                  </a>
+                                </div>
+                                <div class="col-6 text-center">
+                                  <a
+                                    href="https://www.coolapk.com/u/1242007"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="images/icon/5.png"
+                                      class="rounded mx-auto d-block"
+                                      height="50"
+                                      width="50"
+                                      alt="icon"
+                                    />
+                                    酷安
+                                  </a>
+                                </div>
+                                <div class="col-6 text-center">
+                                  <a
+                                    href="https://github.com/jinsexinfeng"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="images/icon/6.png"
+                                      class="rounded mx-auto d-block"
+                                      height="50"
+                                      width="50"
+                                      alt="icon"
+                                    />
+                                    Github
+                                  </a>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      class="btn btn-outline-info"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapse-more"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                    >
-                      更多联系方式
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-dismiss="modal"
-                    >
-                      关闭
-                    </button>
+                    <div class="modal-footer">
+                      <button
+                        class="btn btn-outline-info"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapse-more"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      >
+                        更多联系方式
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        关闭
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="col align-self-bottom align-items-right"
-            data-aos="zoom-out"
-          >
-            <img
-              src="images/Pic-Au.png"
-              class="rounded img-fluid"
-              height="auto"
-              width="60%"
-              alt="头像"
-            />
+            <div
+              class="col align-self-bottom align-items-right"
+              data-aos="zoom-out"
+            >
+              <div style="width: 60%; margin: auto; padding-bottom: 60%">
+                <img
+                  src="images/Pic-Au.png"
+                  style="
+                    border-radius: 5% !important;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 100%;
+                  "
+                  alt="头像"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <svg
-      style="
-        -webkit-transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        -o-transform: rotate(-180deg);
-        transform: rotate(-180deg);
-        margin-top: -1px;
-      "
-      role="background"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px"
-      y="0px"
-      viewbox="0 0 1440 126"
-      xml:space="preserve"
-    >
-      <path
-        d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"
-        fill="var(--my-color2)"
-      />
-    </svg>
+    <!-- 新版大波浪 -->
+    <canvas id="jumbotroncanvas"></canvas>
+    <!-- 旧版大波浪 -->
+    <!-- <svg role="background" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1440 118" xml:space="preserve"  fill="var(--my-color2)">
+<path d="M754.4,87.2c266.9,49.9,515.4,28.9,685.6,8.8V0H0v96C187.3,73.8,430,26.6,754.4,87.2z" />
+</svg> -->
     <div class="container">
       <div class="row">
         <div class="col-12" data-aos="fade-up">
@@ -1125,15 +1129,7 @@
     <script src="js/popper.min.js"></script>
     <!-- aos.js -->
     <script src="js/aos.js"></script>
-    <noscript>
-      <style>
-        *[data-aos] {
-          display: block !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-        }
-      </style>
-    </noscript>
+
     <script>
       // 进入动画
       AOS.init({
@@ -1196,6 +1192,59 @@
           hitokoto.innerText = data.hitokoto;
         })
         .catch(console.error);
+    </script>
+    <script>
+      // 大波浪
+      var canvas = document.getElementById("jumbotroncanvas");
+      var ctx = canvas.getContext("2d");
+      var _width = (canvas.width = canvas.offsetWidth);
+      var _height = (canvas.height = canvas.offsetHeight);
+      var leftDot = (rightDot = _height * 0.7); //起始点和终点高度
+      var leftDotSpeed = 0.2;
+      var rightDotSpeed = 0.16;
+      var n = 0;
+      window.requestAnimationFrame =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
+
+      run();
+
+      function drawWater(n, color, leftDot, rightDot) {
+        var angle = (n * Math.PI) / 180;
+        var deltaHeight = (Math.sin(angle) * _height) / 8;
+        var deltaHeightRight = (Math.cos(angle) * _height) / 7;
+        ctx.beginPath();
+        ctx.moveTo(0, leftDot);
+        ctx.bezierCurveTo(
+          _width / 4,
+          leftDot + deltaHeight,
+          (_width * 3) / 4,
+          rightDot + deltaHeightRight,
+          _width,
+          rightDot
+        );
+        ctx.lineTo(_width, _height);
+        ctx.lineTo(0, _height); //使得下半个矩形闭合
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
+      function run() {
+        ctx.clearRect(0, 0, _width, _height);
+        n += 1;
+        leftDot += leftDotSpeed;
+        rightDot += rightDotSpeed;
+        if (leftDot > _height * 0.8 || leftDot < _height * 0.6) {
+          leftDotSpeed *= -1;
+        }
+        if (rightDot > _height * 0.8 || rightDot < _height * 0.6) {
+          rightDotSpeed *= -1;
+        }
+        drawWater(n + 200, "#66aab1", leftDot, rightDot);
+        drawWater(n, "#386783", leftDot, rightDot);
+        requestAnimationFrame(run);
+      }
     </script>
   </body>
 </html>
