@@ -130,11 +130,13 @@
     <header
       class="topnav navbar navbar-expand-lg navbar-dark bg-my"
       style="z-index: 1030"
+      id="navbar"
     >
       <a class="navbar-brand" href="index.html">
         <strong>金色信封</strong>的网站
       </a>
       <button
+        id="collapse"
         class="navbar-toggler collapsed"
         type="button"
         data-toggle="collapse"
@@ -1168,19 +1170,38 @@
       });
     </script>
     <script>
-      $(document).ready(function () {
-        // 点击导航链接时触发滚动动画
-        $(".dropdown-item").click(function (e) {
-          e.preventDefault();
-          var targetSection = $($(this).attr("href"));
-          $("html, body").animate(
-            {
-              scrollTop: targetSection.offset().top - 100,
-            },
-            1000
-          );
-        });
+       $(document).ready(function () {
+          // 点击导航链接时触发滚动动画
+          $(".dropdown-item").click(function (e) {
+              e.preventDefault();
+              // 获取导航栏元素
+              var navbar = $('#mynavbar');
+              // 计算导航栏高度
+              var navbarHeight = navbar.height();
+              var targetSection = $($(this).attr("href"));
+
+              // 计算目标section距离顶部的距离，并减去导航栏高度
+              var targetSectionTop = targetSection.offset().top - navbarHeight - 40;
+              $("html, body").animate(
+                  {
+                      scrollTop: targetSectionTop,
+                  },
+                   1000
+              );
+              closenavbar();
+          });
+          
       });
+      function closenavbar() {
+          var button = document.getElementById("collapse");
+          var ariaExpanded = button.getAttribute("aria-expanded");
+
+          if (ariaExpanded === "true") {
+            button.classList.add("collapsed");
+            document.getElementById("mynavbar").classList.remove("show");
+            button.setAttribute("aria-expanded", "false");
+          }
+      }
     </script>
     <script>
       // 每日一句
@@ -1196,6 +1217,9 @@
     <script>
       // 大波浪
       var canvas = document.getElementById("jumbotroncanvas");
+      const style = window.getComputedStyle(canvas);
+      const bgColor1 = style.getPropertyValue('--darkreader-bg--my-color1') || style.getPropertyValue('--my-color1');
+      const bgColor2 = style.getPropertyValue('--darkreader-bg--my-color2') || style.getPropertyValue('--my-color2');
       var ctx = canvas.getContext("2d");
       var _width = (canvas.width = canvas.offsetWidth);
       var _height = (canvas.height = canvas.offsetHeight);
@@ -1241,8 +1265,8 @@
         if (rightDot > _height * 0.8 || rightDot < _height * 0.6) {
           rightDotSpeed *= -1;
         }
-        drawWater(n + 200, "#66aab1", leftDot, rightDot);
-        drawWater(n, "#386783", leftDot, rightDot);
+        drawWater(n + 200, bgColor1, leftDot, rightDot);
+        drawWater(n, bgColor2, leftDot, rightDot);
         requestAnimationFrame(run);
       }
     </script>
