@@ -75,6 +75,59 @@
         border-color: var(--my-color1) !important;
       }
 
+      /* 按钮样式 */
+      .button-my-main {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        text-decoration: none;
+        font-size: 1.3em;
+        padding: 0.2em 1em;
+        color: var(--my-color2);
+        background-color: var(--my-bg-color);
+        border: 0.1em solid var(--my-color1);
+        border-radius: 1.5em;
+        transition: 0.8s !important;
+      }
+
+      .button-my-main:before,
+      .button-my-main:after {
+        content: "";
+        position: absolute;
+        top: -1.5em;
+        z-index: -1;
+        width: 200%;
+        aspect-ratio: 1;
+        border: none;
+        border-radius: 43%;
+        background-color: rgba(56, 103, 131, 0.25);
+        transition: 0.8s !important;
+      }
+
+      .button-my-main:before {
+        left: -80%;
+        transform: translate3d(0, 5em, 0) rotate(-340deg);
+      }
+
+      .button-my-main:after {
+        right: -80%;
+        transform: translate3d(0, 5em, 0) rotate(390deg);
+      }
+
+      .button-my-main:hover,
+      .button-my-main:focus {
+        color: white;
+      }
+
+      .button-my-main:hover:before,
+      .button-my-main:hover:after,
+      .button-my-main:focus:before,
+      .button-my-main:focus:after {
+        transform: none;
+        background-color: var(--my-color2);
+      }
+
       .dropdown-menu > .dropdown-item:active {
         background-color: var(--my-color2);
       }
@@ -214,8 +267,7 @@
 
               <!-- Button trigger modal -->
               <button
-                type="button"
-                class="btn btn-outline-light rounded-pill btn-lg"
+                class="button-my-main"
                 data-toggle="modal"
                 data-target="#Modal-Contact"
                 data-aos="fade-up"
@@ -1170,37 +1222,36 @@
       });
     </script>
     <script>
-       $(document).ready(function () {
-          // 点击导航链接时触发滚动动画
-          $(".dropdown-item").click(function (e) {
-              e.preventDefault();
-              // 获取导航栏元素
-              var navbar = $('#mynavbar');
-              // 计算导航栏高度
-              var navbarHeight = navbar.height();
-              var targetSection = $($(this).attr("href"));
+      $(document).ready(function () {
+        // 点击导航链接时触发滚动动画
+        $(".dropdown-item").click(function (e) {
+          e.preventDefault();
+          // 获取导航栏元素
+          var navbar = $("#mynavbar");
+          // 计算导航栏高度
+          var navbarHeight = navbar.height();
+          var targetSection = $($(this).attr("href"));
 
-              // 计算目标section距离顶部的距离，并减去导航栏高度
-              var targetSectionTop = targetSection.offset().top - navbarHeight - 40;
-              $("html, body").animate(
-                  {
-                      scrollTop: targetSectionTop,
-                  },
-                   1000
-              );
-              closenavbar();
-          });
-          
+          // 计算目标section距离顶部的距离，并减去导航栏高度
+          var targetSectionTop = targetSection.offset().top - navbarHeight - 40;
+          $("html, body").animate(
+            {
+              scrollTop: targetSectionTop,
+            },
+            1000
+          );
+          closenavbar();
+        });
       });
       function closenavbar() {
-          var button = document.getElementById("collapse");
-          var ariaExpanded = button.getAttribute("aria-expanded");
+        var button = document.getElementById("collapse");
+        var ariaExpanded = button.getAttribute("aria-expanded");
 
-          if (ariaExpanded === "true") {
-            button.classList.add("collapsed");
-            document.getElementById("mynavbar").classList.remove("show");
-            button.setAttribute("aria-expanded", "false");
-          }
+        if (ariaExpanded === "true") {
+          button.classList.add("collapsed");
+          document.getElementById("mynavbar").classList.remove("show");
+          button.setAttribute("aria-expanded", "false");
+        }
       }
     </script>
     <script>
@@ -1218,8 +1269,12 @@
       // 大波浪
       var canvas = document.getElementById("jumbotroncanvas");
       const style = window.getComputedStyle(canvas);
-      const bgColor1 = style.getPropertyValue('--darkreader-bg--my-color1') || style.getPropertyValue('--my-color1');
-      const bgColor2 = style.getPropertyValue('--darkreader-bg--my-color2') || style.getPropertyValue('--my-color2');
+      const bgColor1 =
+        style.getPropertyValue("--darkreader-bg--my-color1") ||
+        style.getPropertyValue("--my-color1");
+      const bgColor2 =
+        style.getPropertyValue("--darkreader-bg--my-color2") ||
+        style.getPropertyValue("--my-color2");
       var ctx = canvas.getContext("2d");
       var _width = (canvas.width = canvas.offsetWidth);
       var _height = (canvas.height = canvas.offsetHeight);
