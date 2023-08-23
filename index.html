@@ -75,7 +75,7 @@
         border-color: var(--my-color1) !important;
       }
 
-      /* 按钮样式 */
+      /* 主页按钮样式 */
       .button-my-main {
         display: inline-block;
         position: relative;
@@ -90,7 +90,6 @@
         border-radius: 1.5em;
         transition: 0.8s !important;
       }
-
       .button-my-main:before,
       .button-my-main:after {
         content: "";
@@ -104,29 +103,95 @@
         background-color: rgba(56, 103, 131, 0.25);
         transition: 0.8s !important;
       }
-
       .button-my-main:before {
         left: -80%;
         transform: translate3d(0, 5em, 0) rotate(-340deg);
       }
-
       .button-my-main:after {
         right: -80%;
         transform: translate3d(0, 5em, 0) rotate(390deg);
       }
-
-      .button-my-main:hover,
-      .button-my-main:focus {
+      .button-my-main:hover {
         color: white;
       }
-
       .button-my-main:hover:before,
-      .button-my-main:hover:after,
-      .button-my-main:focus:before,
-      .button-my-main:focus:after {
+      .button-my-main:hover:after {
         transform: none;
         background-color: var(--my-color2);
       }
+      
+      .jcard{
+            /* 相对定位 */
+            position: relative;
+            background-color: #758a99;
+            border-radius: 20px;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 弹性布局 */
+            display: flex;
+            /* 元素纵向排列 */
+            height: 300px;
+            flex-direction: column;
+            /* 居中 */
+            align-items: center;
+            color: #fff;
+            /* 阴影 */
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            /* 不让其被挤压 */
+            flex-shrink: 0;
+        }
+        .jcard .photo img{
+            width: 100%;
+            height: 100%;
+            /* 保持原有尺寸比例，裁切长边 */
+            object-fit: cover;
+        }
+        /* 默认大图 */
+        .jcard .photo{
+            /* 绝对定位 */
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0%;
+            overflow: hidden;
+            /* 动画过渡 */
+            transition: 0.5s;
+        }
+        /* 鼠标移入变小图 */
+        .jcard:hover .photo{
+            top: 25px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+        /* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+        .jcard .photo::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom,transparent 50%,#222);
+            transition: 0.5s;
+        }
+        .jcard h1{
+            position: absolute;
+            top: 220px;
+            transition: 0.5s;
+        }
+        .jcard:hover h1{
+            top: 170px;
+        }
+        .jcard p{
+            margin-top: 230px;
+            width: 80%;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 1em;
+            text-align: center;
+            padding-top: 5px;
+        }
+
 
       .dropdown-menu > .dropdown-item:active {
         background-color: var(--my-color2);
@@ -569,57 +634,34 @@
           兴趣爱好
         </h2>
         <div class="row text-center">
-          <div class="col-6 col-lg-3" data-aos="zoom-in-up">
-            <div class="card" style="box-shadow: 5px 8px 10px 3px #888888">
-              <img
-                class="card-img-top"
-                src="images/xq/xq1.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h1 class="card-title" style="margin-bottom: 0%">编程</h1>
-                <br />
-              </div>
+
+
+          <div class="col-6 col-lg-3" data-aos="zoom-in-up" style="padding:8px !important">
+            <div class="jcard">
+              <div class="photo"><img src="images/xq/xq1.jpg" alt=""></div>
+              <h1>编程</h1>
+              <p>创造力和逻辑思维的艺术</p>
             </div>
           </div>
-          <div class="col-lg-3 col-6" data-aos="zoom-in-up">
-            <div class="card" style="box-shadow: 5px 8px 10px 3px #888888">
-              <img
-                class="card-img-top"
-                src="images/xq/xq2.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h1 class="card-title" style="margin-bottom: 0%">摄影</h1>
-                <br />
-              </div>
-            </div>
-            <p></p>
-          </div>
-          <div class="col-lg-3 col-6" data-aos="zoom-in-up">
-            <div class="card" style="box-shadow: 5px 8px 10px 3px #888888">
-              <img
-                class="card-img-top"
-                src="images/xq/xq3.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h1 class="card-title" style="margin-bottom: 0%">美食</h1>
-                <br />
-              </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in-up" style="padding:8px !important">
+            <div class="jcard">
+              <div class="photo"><img src="images/xq/xq2.jpg" alt=""></div>
+              <h1>摄影</h1>
+              <p>捕捉时刻展现情感的方式</p>
             </div>
           </div>
-          <div class="col-lg-3 col-6" data-aos="zoom-in-up">
-            <div class="card" style="box-shadow: 5px 8px 10px 3px #888888">
-              <img
-                class="card-img-top"
-                src="images/xq/xq4.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h1 class="card-title" style="margin-bottom: 0%">音乐</h1>
-                <br />
-              </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in-up" style="padding:8px !important">
+            <div class="jcard">
+              <div class="photo"><img src="images/xq/xq3.jpg" alt=""></div>
+              <h1>美食</h1>
+              <p>开启文化与味觉之旅的门</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in-up" style="padding:8px !important">
+            <div class="jcard">
+              <div class="photo"><img src="images/xq/xq4.jpg" alt=""></div>
+              <h1>音乐</h1>
+              <p>超越语言抒发灵魂与情感</p>
             </div>
           </div>
         </div>
