@@ -24,6 +24,7 @@
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
     <!-- aos.css -->
     <link href="css/aos.css" rel="stylesheet" />
+    <link href="css/DarkReader.css" rel="stylesheet" media="(prefers-color-scheme: dark)"/>
     <script>
       var _hmt = _hmt || [];
       (function () {
@@ -34,26 +35,62 @@
       })();
     </script>
     <style>
-      :root {
-        --my-bg-color: #f3f6fb;
-        --my-text-color: #272343;
-        --my-color2: #386783;
-        --my-color1: #66aab1;
-      }
+      @media (prefers-color-scheme: light) { 
+        :root {
+          --my-bg-color: #f3f6fb;
+          --my-text-color: #272343;
+          --my-color2: #386783;
+          --my-color1: #66aab1;
+        }
 
-      html,
-      body {
-        background-color: var(--my-bg-color);
-      }
+        html,
+        body {
+          background-color: var(--my-bg-color);
+        }
 
-      .text-my {
-        color: var(--my-text-color);
+        .text-my {
+          color: var(--my-text-color);
+        }
+        .jumbotron-my {
+          background-color: var(--my-color2);
+          color: #fff;
+        }
+        
+        
+        .bg-my {
+          background-color: var(--my-color2);
+        }
+
+        .bg-my2 {
+          background-color: var(--my-color1);
+        }
+
+        .border-my {
+          border-color: var(--my-color1) !important;
+        }
+        .button-my-main {
+          color: var(--my-color2);
+          background-color: var(--my-bg-color);
+          border: 0.1em solid var(--my-color1);
+        }
+        .jcard{
+          background-color: #758a99;
+          color: #fff;
+          /* 阴影 */
+          box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+        ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+          background: rgb(230, 230, 230);
+        }
+        .TextOnImage{
+          color: rgba(0, 0, 0, 0.5);
+        }
       }
       .jumbotron-my {
         padding-bottom: 1rem;
-        background-color: var(--my-color2);
-        color: #fff;
       }
+
       #jumbotroncanvas {
         width: 100%;
         height: 20vh;
@@ -62,18 +99,7 @@
         -o-transform: rotate(-180deg);
         transform: rotate(-180deg);
       }
-
-      .bg-my {
-        background-color: var(--my-color2);
-      }
-
-      .bg-my2 {
-        background-color: var(--my-color1);
-      }
-
-      .border-my {
-        border-color: var(--my-color1) !important;
-      }
+      
 
       /* 主页按钮样式 */
       .button-my-main {
@@ -84,9 +110,6 @@
         text-decoration: none;
         font-size: 1.3em;
         padding: 0.2em 1em;
-        color: var(--my-color2);
-        background-color: var(--my-bg-color);
-        border: 0.1em solid var(--my-color1);
         border-radius: 1.5em;
         transition: 0.8s !important;
       }
@@ -121,76 +144,72 @@
       }
       
       .jcard{
-            /* 相对定位 */
-            position: relative;
-            background-color: #758a99;
-            border-radius: 20px;
-            /* 溢出隐藏 */
-            overflow: hidden;
-            /* 弹性布局 */
-            display: flex;
-            /* 元素纵向排列 */
-            height: 300px;
-            flex-direction: column;
-            /* 居中 */
-            align-items: center;
-            color: #fff;
-            /* 阴影 */
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            /* 不让其被挤压 */
-            flex-shrink: 0;
-        }
-        .jcard .photo img{
-            width: 100%;
-            height: 100%;
-            /* 保持原有尺寸比例，裁切长边 */
-            object-fit: cover;
-        }
-        /* 默认大图 */
-        .jcard .photo{
-            /* 绝对定位 */
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 0%;
-            overflow: hidden;
-            /* 动画过渡 */
-            transition: 0.5s;
-        }
-        /* 鼠标移入变小图 */
-        .jcard:hover .photo{
-            top: 25px;
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(0,0,0,0.8);
-        }
-        /* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
-        .jcard .photo::before{
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom,transparent 50%,#222);
-            transition: 0.5s;
-        }
-        .jcard h1{
-            position: absolute;
-            top: 220px;
-            transition: 0.5s;
-        }
-        .jcard:hover h1{
-            top: 170px;
-        }
-        .jcard p{
-            margin-top: 230px;
-            width: 80%;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            font-size: 1em;
-            text-align: center;
-            padding-top: 5px;
-        }
+          /* 相对定位 */
+          position: relative;
+          border-radius: 20px;
+          /* 溢出隐藏 */
+          overflow: hidden;
+          /* 弹性布局 */
+          display: flex;
+          /* 元素纵向排列 */
+          height: 300px;
+          flex-direction: column;
+          /* 居中 */
+          align-items: center;
+          /* 不让其被挤压 */
+          flex-shrink: 0;
+      }
+      .jcard .photo img{
+          width: 100%;
+          height: 100%;
+          /* 保持原有尺寸比例，裁切长边 */
+          object-fit: cover;
+      }
+      /* 默认大图 */
+      .jcard .photo{
+          /* 绝对定位 */
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 0%;
+          overflow: hidden;
+          /* 动画过渡 */
+          transition: 0.5s;
+      }
+      /* 鼠标移入变小图 */
+      .jcard:hover .photo{
+          top: 25px;
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      }
+      /* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+      .jcard .photo::before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom,transparent 50%,#222);
+          transition: 0.5s;
+      }
+      .jcard h1{
+          position: absolute;
+          top: 220px;
+          transition: 0.5s;
+      }
+      .jcard:hover h1{
+          top: 170px;
+      }
+      .jcard p{
+          margin-top: 230px;
+          width: 80%;
+          border-top: 1px solid rgba(255,255,255,0.3);
+          font-size: 1em;
+          text-align: center;
+          padding-top: 5px;
+      }
 
 
       .dropdown-menu > .dropdown-item:active {
@@ -206,7 +225,6 @@
         z-index: 10;
         padding-top: 20px;
         padding-bottom: 20px;
-        color: rgba(0, 0, 0, 0.5);
         text-align: center;
       }
 
@@ -219,10 +237,7 @@
         margin-top: 30px;
         margin-bottom: 30px;
       }
-      ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-        background: rgb(230, 230, 230);
-      }
+      
       ::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background-color: var(--my-color2);
