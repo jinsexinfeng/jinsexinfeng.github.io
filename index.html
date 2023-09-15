@@ -1249,12 +1249,8 @@
     </script>
 
     <script src="js/bootstrap-4.4.1.js"></script>
-    <script>
-      function isLightThemeSupported() {
-        const mediaQuery = "(prefers-color-scheme: light)";
-        const querySupport = window.matchMedia(mediaQuery).matches;
-        return querySupport;
-        if (!querySupport) {
+    <script>      
+        if (window.getComputedStyle(document.body).backgroundColor === "rgb(255, 255, 255)") {
           let css = "";
           css += `
           :root {
@@ -1316,7 +1312,6 @@
             (document.querySelector("head") || document.documentElement).appendChild(styleNode);
           };
           } 
-        }
     </script>
     <script>
       // 导航改色
