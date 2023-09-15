@@ -35,62 +35,9 @@
       })();
     </script>
     <style>
-      @media (prefers-color-scheme: light) { 
-        :root {
-          --my-bg-color: #f3f6fb;
-          --my-text-color: #272343;
-          --my-color2: #386783;
-          --my-color1: #66aab1;
-        }
-
-        html,
-        body {
-          background-color: var(--my-bg-color);
-        }
-
-        .text-my {
-          color: var(--my-text-color);
-        }
-        .jumbotron-my {
-          background-color: var(--my-color2);
-          color: #fff;
-        }
-        
-        
-        .bg-my {
-          background-color: var(--my-color2);
-        }
-
-        .bg-my2 {
-          background-color: var(--my-color1);
-        }
-
-        .border-my {
-          border-color: var(--my-color1) !important;
-        }
-        .button-my-main {
-          color: var(--my-color2);
-          background-color: var(--my-bg-color);
-          border: 0.1em solid var(--my-color1);
-        }
-        .jcard{
-          background-color: #758a99;
-          color: #fff;
-          /* 阴影 */
-          box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        }
-        ::-webkit-scrollbar-track {
-          -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-          background: rgb(230, 230, 230);
-        }
-        .TextOnImage{
-          color: rgba(0, 0, 0, 0.5);
-        }
-      }
       .jumbotron-my {
         padding-bottom: 1rem;
       }
-
       #jumbotroncanvas {
         width: 100%;
         height: 20vh;
@@ -99,8 +46,6 @@
         -o-transform: rotate(-180deg);
         transform: rotate(-180deg);
       }
-      
-
       /* 主页按钮样式 */
       .button-my-main {
         display: inline-block;
@@ -142,7 +87,6 @@
         transform: none;
         background-color: var(--my-color2);
       }
-      
       .jcard{
           /* 相对定位 */
           position: relative;
@@ -210,12 +154,9 @@
           text-align: center;
           padding-top: 5px;
       }
-
-
       .dropdown-menu > .dropdown-item:active {
         background-color: var(--my-color2);
       }
-
       .TextOnImage {
         position: absolute;
         font-size: 1.75rem;
@@ -227,17 +168,14 @@
         padding-bottom: 20px;
         text-align: center;
       }
-
       .PaddingSmall {
         padding-left: 5px;
         padding-right: 5px;
       }
-
       .MarginLarge {
         margin-top: 30px;
         margin-bottom: 30px;
       }
-      
       ::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background-color: var(--my-color2);
@@ -1250,7 +1188,7 @@
 
     <script src="js/bootstrap-4.4.1.js"></script>
     <script>      
-        if (window.getComputedStyle(document.body).backgroundColor === "rgb(255, 255, 255)") {
+        if (window.getComputedStyle(document.body).backgroundColor === "rgb(255, 255, 255)"||window.matchMedia("(prefers-color-scheme: light)").matches) {
           let css = "";
           css += `
           :root {
@@ -1444,6 +1382,21 @@
         drawWater(n + 200, bgColor1, leftDot, rightDot);
         drawWater(n, bgColor2, leftDot, rightDot);
         requestAnimationFrame(run);
+      }
+    </script>
+    <script>
+      // 监听暗色、亮色切换
+      let lightMedia = window.matchMedia('(prefers-color-scheme: light)');
+      let darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+      let callback = (e) => {
+          let prefersDarkMode = e.matches;
+          if (prefersDarkMode) {
+            window.location.reload();
+          }
+      };
+      if (typeof darkMedia.addEventListener === 'function'||typeof lightMedia.addEventListener === 'function') {
+          lightMedia.addEventListener('change', callback);
+          darkMedia.addEventListener('change', callback);
       }
     </script>
   </body>
