@@ -37,6 +37,7 @@
     <style>
       .jumbotron-my {
         padding-bottom: 1rem;
+        padding-top: 80px;
       }
       #jumbotroncanvas {
         width: 100%;
@@ -196,11 +197,11 @@
     </style>
   </head>
 
-  <body style="overflow-x: hidden">
+    <body style="overflow-x: hidden;" >
     <!-- navbar -->
     <header
       class="topnav navbar navbar-expand-lg navbar-dark bg-my"
-      style="z-index: 1030"
+      style="z-index: 1030;width: 100%; position: fixed;top: 0;left: 0;"
       id="navbar"
     >
       <a class="navbar-brand" href="index.html">
@@ -464,10 +465,11 @@
     <!-- 新版大波浪 -->
     <canvas id="jumbotroncanvas"></canvas>
     <!-- 旧版大波浪 -->
-    <!-- <svg role="background" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1440 118" xml:space="preserve"  fill="var(--my-color2)">
-<path d="M754.4,87.2c266.9,49.9,515.4,28.9,685.6,8.8V0H0v96C187.3,73.8,430,26.6,754.4,87.2z" />
-</svg> -->
+    <!-- <svg role="background" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	    viewBox="0 0 1440 118" xml:space="preserve"  fill="var(--my-color2)">
+      <path d="M754.4,87.2c266.9,49.9,515.4,28.9,685.6,8.8V0H0v96C187.3,73.8,430,26.6,754.4,87.2z" />
+    </svg> -->
     <div class="container">
       <div class="row">
         <div class="col-12" data-aos="fade-up">
@@ -906,19 +908,11 @@
       </div>
     </div>
     <div class="container">
-      <!--
-    <h2>话说温州</h2>
-    <div class="row">
-      <div class="col-md-6 col-12">
-        <p> 浙江温州 </p>
-      </div>
-    </div>
-    -->
       <div
         class="col-md-8 col-sm-12 offset-md-2"
         style="margin-top: 45px; margin-bottom: 45px"
       >
-        <h2 class="text-my" id="jsxf-6" data-aos="fade-up">总结</h2>
+        <h2 class="text-my" id="jsxf-6" data-aos="fade-left">总结</h2>
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -1183,6 +1177,7 @@
       // 进入动画
       AOS.init({
         duration: 800,
+        disableMutationObserver:true,
       });
     </script>
 
@@ -1256,7 +1251,8 @@
       jQuery(document).ready(function () {
         $(window).scroll(function () {
           $(".topnav").toggleClass(
-            "bg-light navbar-light shadow-sm scrollednav py-0",
+            // "bg-light navbar-light shadow-sm scrollednav py-0",
+            "bg-light navbar-light shadow-sm scrollednav",
             $(this).scrollTop() >= 50
           );
           $(".topnav").toggleClass(
@@ -1267,32 +1263,26 @@
       });
     </script>
     <script>
-      //navbar置顶
-      window.addEventListener("scroll", function () {
-        var navbar = document.querySelector(".navbar");
-        var scrollTop = window.pageYOffset;
-        var windowHeight = window.innerHeight;
-
-        if (scrollTop > 0) {
-          navbar.style.top = scrollTop + "px";
-        } else {
-          navbar.style.top = "0";
-        }
+      window.addEventListener('resize', () => {
+      const navbar = document.getElementById('navbar');
+      const pageWidth = window.innerWidth;
+      navbar.style.width = `${pageWidth}px`;
       });
+
+      // 初始化时设置#navbar的宽度
+      const navbar = document.getElementById('navbar');
+      const pageWidth = window.innerWidth;
+      navbar.style.width = `${pageWidth}px`;
     </script>
     <script>
       $(document).ready(function () {
         // 点击导航链接时触发滚动动画
         $(".dropdown-item").click(function (e) {
           e.preventDefault();
-          // 获取导航栏元素
-          var navbar = $("#mynavbar");
-          // 计算导航栏高度
-          var navbarHeight = navbar.height();
           var targetSection = $($(this).attr("href"));
 
           // 计算目标section距离顶部的距离，并减去导航栏高度
-          var targetSectionTop = targetSection.offset().top - navbarHeight - 40;
+          var targetSectionTop = targetSection.offset().top - 70;
           $("html, body").animate(
             {
               scrollTop: targetSectionTop,
