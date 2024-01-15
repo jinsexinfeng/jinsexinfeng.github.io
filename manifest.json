@@ -1,0 +1,11 @@
+{  
+    "name": "Jinsexinfeng",
+    "display": "standalone",
+    "Start_Url": "./index.html",
+    "icons": [{
+        "src": "images/Pic-Au144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }]
+    
+}
