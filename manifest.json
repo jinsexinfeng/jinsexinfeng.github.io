@@ -1,7 +1,9 @@
 {  
     "name": "Jinsexinfeng",
     "display": "standalone",
-    "Start_Url": "./index.html",
+    "theme_color" : "#386783" ,
+    "background_color": "#f3f6fb",
+    "Start_Url": "/",
     "icons": [{
         "src": "images/Pic-Au144.png",
         "sizes": "144x144",
