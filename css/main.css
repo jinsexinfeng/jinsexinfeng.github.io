@@ -20,6 +20,10 @@
   transform: translate(-50%, -50%);
   height: 100%;
 }
+#install{
+  background-color: transparent;
+  border: none;
+}
 .myp {
   line-height: 2;
 }
