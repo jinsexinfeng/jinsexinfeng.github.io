@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <title>金色信封</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="webmanifest" href="manifest.json" />
+  <link rel="manifest" href="manifest.json" />
   <meta itemprop="name" content="金色信封" />
   <meta itemprop="image" content="images/Pic-Au.jpg" />
   <meta name="description" itemprop="description" content="金子博的个人网站" />
   <meta name="Keywords" content="网站,博客,金子博,个人,金色信封,Au,3517860006" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#386783" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#244254" />
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
   <!-- aos.css -->
@@ -62,6 +64,10 @@
           <li class="nav-item">
             <a class="nav-link" href="#">点不了的链接</a>
           </li>
+          <li class="nav-item">
+            <button class="nav-link" id="install" hidden>安装应用</button>
+          </li>
+          
         </ul>
         <ul class="navbar-nav ml-auto d-flex align-items-center">
           <li class="nav-item">
@@ -183,7 +189,7 @@
     <!-- 新版大波浪 -->
     <canvas id="jumbotroncanvas"></canvas>
     <!-- 旧版大波浪 -->
-    <!-- <svg role="background" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	    viewBox="0 0 1440 118" xml:space="preserve"  fill="var(--my-color2)">
       <path d="M754.4,87.2c266.9,49.9,515.4,28.9,685.6,8.8V0H0v96C187.3,73.8,430,26.6,754.4,87.2z" />
@@ -236,8 +242,8 @@
 
     <!-- 兴趣爱好 -->
     <!--background-color:#66aab1-->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 90"
-      xml:space="preserve" x="0px" y="0px" role="background">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	viewbox="0 0 1440 90" xml:space="preserve" x="0px" y="0px" >
       <g transform="translate(0 0)">
         <rect width="1440" height="30" transform="translate(0 30)" fill="var(--my-color1)" />
         <rect width="1440" height="30" transform="translate(0 60)" fill="none" />
@@ -281,8 +287,8 @@
         </div>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 90"
-      xml:space="preserve" x="0px" y="0px" role="background">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewbox="0 0 1440 90" xml:space="preserve" x="0px" y="0px">
       <g transform="translate(0 0)">
         <rect width="1440" height="30" transform="translate(0 30)" fill="var(--my-color1)" />
         <rect width="1440" height="30" transform="translate(0 60)" fill="none" />
@@ -818,6 +824,29 @@
       duration: 800,
       disableMutationObserver: true,
     });
+  </script>
+  <script>
+    let installPrompt = null;
+    const installButton = document.querySelector("#install");
+
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      installPrompt = event;
+      installButton.removeAttribute("hidden");
+    });
+    installButton.addEventListener("click", async () => {
+      if (!installPrompt) {
+        return;
+      }
+      const result = await installPrompt.prompt();
+      console.log(`Install prompt was: ${result.outcome}`);
+      disableInAppInstallPrompt();
+    });
+
+    function disableInAppInstallPrompt() {
+      installPrompt = null;
+      installButton.setAttribute("hidden", "");
+    }
   </script>
 </body>
 
