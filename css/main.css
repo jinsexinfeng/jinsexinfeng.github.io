@@ -1,0 +1,266 @@
+body {
+  overflow-x: hidden;
+}
+#navbar {
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: saturate(5) blur(20px);
+  backdrop-filter: saturate(5) blur(20px);
+}
+
+#mainicon {
+  width: 60%;
+  margin: auto;
+  padding-bottom: 60%;
+}
+#mainicon img {
+  border-radius: 5% !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+.myp {
+  line-height: 2;
+}
+.imsize-150 {
+  height: 150px;
+  width: 150px;
+}
+.imsize-180 {
+  height: 180px;
+  width: 180px;
+}
+
+.img-right {
+  float: right;
+}
+.img-left {
+  float: left;
+}
+.padding-8 {
+  padding: 8px;
+}
+#grz1 {
+  height: 592px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.jumbotron-my {
+  padding-bottom: 1rem;
+  padding-top: 80px;
+}
+#jumbotroncanvas {
+  width: 100%;
+  height: 20vh;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+/* 主页按钮样式 */
+.button-my-main {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 0.2em 1em;
+  border-radius: 1.5em;
+  transition: 0.8s !important;
+}
+.button-my-main:before,
+.button-my-main:after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  z-index: -1;
+  width: 200%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 43%;
+  background-color: rgba(56, 103, 131, 0.25);
+  transition: 0.8s !important;
+}
+.button-my-main:before {
+  left: -80%;
+  transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+.button-my-main:after {
+  right: -80%;
+  transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+.button-my-main:hover {
+  color: white;
+}
+.button-my-main:hover:before,
+.button-my-main:hover:after {
+  transform: none;
+  background-color: var(--my-color2);
+}
+.jcard {
+  /* 相对定位 */
+  position: relative;
+  border-radius: 20px;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 弹性布局 */
+  display: flex;
+  /* 元素纵向排列 */
+  height: 300px;
+  flex-direction: column;
+  /* 居中 */
+  align-items: center;
+  /* 不让其被挤压 */
+  flex-shrink: 0;
+}
+.jcard .photo img {
+  width: 100%;
+  height: 100%;
+  /* 保持原有尺寸比例，裁切长边 */
+  object-fit: cover;
+}
+/* 默认大图 */
+.jcard .photo {
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  overflow: hidden;
+  /* 动画过渡 */
+  transition: 0.5s;
+}
+/* 鼠标移入变小图 */
+.jcard:hover .photo {
+  top: 25px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+/* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+.jcard .photo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, #222);
+  transition: 0.5s;
+}
+.jcard h1 {
+  position: absolute;
+  top: 220px;
+  transition: 0.5s;
+}
+.jcard:hover h1 {
+  top: 170px;
+}
+.jcard p {
+  margin-top: 230px;
+  width: 80%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1em;
+  text-align: center;
+  padding-top: 5px;
+}
+.dropdown-menu > .dropdown-item:active {
+  background-color: var(--my-color2);
+}
+.TextOnImage {
+  position: absolute;
+  font-size: 1.75rem;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.padding-5 {
+  padding: 5px;
+}
+.MarginLarge {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--my-color2);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    hsla(0, 0%, 100%, 0.2) 25%,
+    transparent 0,
+    transparent 50%,
+    hsla(0, 0%, 100%, 0.2) 0,
+    hsla(0, 0%, 100%, 0.2) 75%,
+    transparent 0,
+    transparent
+  );
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+:root {
+  --my-bg-color: #f3f6fb;
+  --my-text-color: #272343;
+  --my-color2: #386783;
+  --my-color1: #66aab1;
+}
+
+html,
+body {
+  background-color: var(--my-bg-color);
+}
+
+.text-my {
+  color: var(--my-text-color);
+}
+.jumbotron-my {
+  background-color: var(--my-color2);
+  color: #fff;
+}
+
+.bg-my {
+  background-color: var(--my-color2);
+}
+
+.bg-my2 {
+  background-color: var(--my-color1);
+}
+.bg-h-my {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.border-my {
+  border-color: var(--my-color1) !important;
+}
+.button-my-main {
+  color: var(--my-color2);
+  background-color: var(--my-bg-color);
+  border: 0.1em solid var(--my-color1);
+}
+.jcard {
+  background-color: #758a99;
+  color: #fff;
+  /* 阴影 */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgb(230, 230, 230);
+}
+.TextOnImage {
+  color: rgba(0, 0, 0, 0.5);
+}

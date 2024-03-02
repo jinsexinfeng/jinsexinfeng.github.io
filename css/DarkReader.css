@@ -161,12 +161,12 @@ hr {
 .navbar-dark .navbar-brand {
   color: rgb(232, 230, 227);
 }
-.navbar-light .navbar-brand{
+.navbar-light .navbar-brand {
   color: rgb(232, 230, 227);
 }
-.navbar-light .navbar-brand:hover, 
+.navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
-    color: #fff;
+  color: #fff;
 }
 
 .navbar-dark .navbar-toggler {
@@ -315,6 +315,9 @@ body {
 }
 .bg-my2 {
   background-color: var(--my-color1);
+}
+.bg-h-my {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .border-my {
   border-color: var(--my-color1) !important;
