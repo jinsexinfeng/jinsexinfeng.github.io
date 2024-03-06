@@ -1,589 +1,986 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <title>金色信封</title>
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="manifest" href="manifest.json" />
-  <meta itemprop="name" content="金色信封" />
-  <meta itemprop="image" content="images/Pic-Au.jpg" />
-  <meta name="description" itemprop="description" content="金子博的个人网站" />
-  <meta name="Keywords" content="网站,博客,金子博,个人,金色信封,Au,3517860006" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#386783" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#244254" />
-  <!-- Bootstrap -->
-  <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
-  <!-- aos.css -->
-  <link href="css/aos.css" rel="stylesheet" />
-  <link href="css/main.css" rel="stylesheet" />
-  <link href="css/DarkReader.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?80b2da0150341a65f5c556774f7f642c";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>金色信封</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+    <meta itemprop="name" content="金色信封" />
+    <meta itemprop="image" content="images/Pic-Au.jpg" />
+    <meta
+      name="description"
+      itemprop="description"
+      content="金子博的个人网站"
+    />
+    <meta
+      name="Keywords"
+      content="网站,博客,金子博,个人,金色信封,Au,3517860006"
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#386783"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#244254"
+    />
+    <link href="css/loading.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <!-- aos.css -->
+    <link href="css/aos.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link
+      href="css/DarkReader.css"
+      rel="stylesheet"
+      media="(prefers-color-scheme: dark)"
+    />
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?80b2da0150341a65f5c556774f7f642c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </head>
 
-<body>
-  <div style="overflow-x: hidden;">
-    <!-- navbar -->
-    <header class="topnav navbar navbar-expand-lg navbar-dark bg-my" id="navbar">
-      <a class="navbar-brand" href="index.html">
-        <strong>金色信封</strong>的网站
-      </a>
-      <button id="collapse" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-        data-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"> </span>
-      </button>
-      <div class="navbar-collapse collapse" id="mynavbar">
-        <ul class="navbar-nav mr-auto d-flex align-items-center">
-          <li class="nav-item">
-            <a class="nav-link" href="xxzl.html" target="_blank"> 资源 </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              索引
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#jsxf-1">自我介绍</a>
-              <a class="dropdown-item" href="#jsxf-2">兴趣爱好</a>
-              <a class="dropdown-item" href="#jsxf-3">个人荣誉</a>
-              <a class="dropdown-item" href="#jsxf-4">擅长软件</a>
-              <a class="dropdown-item" href="#jsxf-5">作品展示</a>
-              <a class="dropdown-item" href="#jsxf-6">自我总结</a>
-              <a class="dropdown-item" href="#jsxf-7">我的好友</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">点不了的链接</a>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" id="install" hidden>安装应用</button>
-          </li>
-          
-        </ul>
-        <ul class="navbar-nav ml-auto d-flex align-items-center">
-          <li class="nav-item">
-            <a class="btn bg-my2 text-white btn-round shadow" href="https://jinsexinfeng.github.io" target="_blank">
-              jinsexinfeng.github.io
-            </a>
-          </li>
-        </ul>
+  <body>
+    <!--加载-->
+    <div id="loading">
+      <div id="loading-center">
+        <div class="object" id="object_four"></div>
+        <div class="object" id="object_three"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_one"></div>
+        <div id="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.37 254.37">
+            <path
+              class="cls-1"
+              d="M39.63 105.8h138.86v79.02h-138.86z"
+              transform="translate(134.69 -34.56) rotate(45)"
+            />
+            <path
+              class="cls-1"
+              d="m25.95,6.31C20.86,1.23,12.62,1.23,7.54,6.31c-5.08,5.08-5.08,13.33,0,18.41l61.96,61.96,18.41-18.41L25.95,6.31Z"
+            />
+            <path
+              class="cls-1"
+              d="m25.04,42.23c-5.16-5.16-13.52-5.16-18.67,0-5.16,5.16-5.16,13.52,0,18.67l44.46,44.46,18.67-18.67L25.04,42.23Z"
+            />
+            <path
+              class="cls-1"
+              d="m25.64,80.18c-5.19-5.19-13.6-5.19-18.79,0-5.19,5.19-5.19,13.6,0,18.79l25.18,25.18,18.79-18.79-25.18-25.18Z"
+            />
+            <path
+              class="cls-1"
+              d="m248.06,228.42l-61.96-61.96-18.41,18.41,61.96,61.96c5.08,5.08,13.33,5.08,18.41,0,5.08-5.08,5.08-13.33,0-18.41Z"
+            />
+            <path
+              class="cls-1"
+              d="m212.14,229.33l-44.46-44.46-18.67,18.67,44.46,44.46c5.16,5.16,13.52,5.16,18.67,0,5.16-5.16,5.16-13.52,0-18.67Z"
+            />
+            <path
+              class="cls-1"
+              d="m174.19,228.72l-25.18-25.18-18.79,18.79,25.18,25.18c5.19,5.19,13.6,5.19,18.79,0s5.19-13.6,0-18.79Z"
+            />
+            <path
+              class="cls-2"
+              d="m98.89,159.49c-1.12,3.54-4.93-1.2-5.39-2.85.03-.17.08-.37.16-.58l5.05-10.55-13.33-13.33c-.55.08-11.21,6.01-11.53,5.18-1.49-.9-5.49-3.93-2.11-5.05,0,0,40.52-19.02,40.52-19.02.52-.24.92-.27,1.45,0,1.53,1.28,4.91,3.41,4.19,5.69,0,0-19.02,40.52-19.02,40.52v-.02Zm12.48-40.07l-.03-.03-21.5,10.45,11.15,11.15,10.38-21.57h0Zm10.6,64.94c-1.45.89-3.86-1.96-3.99-3.3-.06-.24,3.04-3.13,3.21-3.36-7.77.98-16.03-4.46-15.03-12.47.88-7.08,14.52-17.12,18.87-22.38,1.18-1.12,5.15,2.94,4.11,4.11-2.18,2.39-14.43,13.9-15.83,16.39-4.57,7.5,4.34,11.81,11.25,10.18.41-.25,15.48-15.8,16-15.83,1.45.25,4.48,2.75,3.69,4.37,0,0-22.29,22.29-22.29,22.29h0Z"
+            />
+          </svg>
+        </div>
       </div>
-    </header>
-
-    <!-- wavy header -->
-    <div
-      class="jumbotron-my jumbotron-fluid container-fluid d-lg-flex align-items-center justify-content-between text-center pl-lg-5 ">
-      <div class="col pt-4 pb-4">
-        <h1 class="display-3 MarginLarge" data-aos="zoom-in">金子博</h1>
-        <h5 class="font-weight-light mb-4" data-aos="fade-up">
-          育英🎈2022🎈计算机网络
-        </h5>
-        <h5 class="font-weight-light mb-4" data-aos="fade-up">
-          📢来啦，快关注我！
-        </h5>
-
-        <!-- Button trigger modal -->
-        <button class="button-my-main" type="button" data-toggle="modal" data-target="#Modal-Contact"
-          data-aos="fade-up">
-          联系我
+      <button id="hideButton"><span tabindex="-1">&times;</span></button>
+    </div>
+    <!--正文-->
+    <div style="overflow-x: hidden">
+      <!-- navbar -->
+      <header
+        class="topnav navbar navbar-expand-lg navbar-dark bg-my"
+        id="navbar"
+      >
+        <a class="navbar-brand" href="index.html">
+          <strong>金色信封</strong>的网站
+        </a>
+        <button
+          id="collapse"
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mynavbar"
+          aria-controls="mynavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"> </span>
         </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="Modal-Contact" tabindex="-1" aria-labelledby="ModalLabel-Contact-Label">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-body" id="ModalLabel-Contact">
-                  联系方式
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span tabindex="-1">&times;</span>
-                </button>
+        <div class="navbar-collapse collapse" id="mynavbar">
+          <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="xxzl.html" target="_blank"> 资源 </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-center"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                索引
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#jsxf-1">自我介绍</a>
+                <a class="dropdown-item" href="#jsxf-2">兴趣爱好</a>
+                <a class="dropdown-item" href="#jsxf-3">个人荣誉</a>
+                <a class="dropdown-item" href="#jsxf-4">擅长软件</a>
+                <a class="dropdown-item" href="#jsxf-5">作品展示</a>
+                <a class="dropdown-item" href="#jsxf-6">自我总结</a>
+                <a class="dropdown-item" href="#jsxf-7">我的好友</a>
               </div>
-              <div class="modal-body">
-                <!-- 其他网站 -->
-                <div class="row text-body">
-                  <div class="col-4">
-                    <img src="images/icon/8.png" height="60" width="60" alt="icon" />
-                  </div>
-                  <div class="col-8">
-                    QQ<br />
-                    3517860006<br />
-                  </div>
-                  <div class="col-4">
-                    <img src="images/icon/9.png" height="60" width="60" alt="icon" />
-                  </div>
-                  <div class="col-8">
-                    微信<br />
-                    jinsexinfeng-jzb<br />
-                  </div>
-                  <div class="col-12 text-center">
-                    <div class="collapse" id="collapse-more">
-                      <div class="card card-body">
-                        <div class="row">
-                          <div class="col-6 text-center">
-                            <a href="https://weibo.com/3250150087/" target="_blank">
-                              <img src="images/icon/2.png" class="rounded mx-auto d-block" height="50" width="50"
-                                alt="icon" />
-                              新浪微博
-                            </a>
-                          </div>
-                          <div class="col-6 text-center">
-                            <a href="https://v.douyin.com/JVFHYav/" target="_blank">
-                              <img src="images/icon/4.png" class="rounded mx-auto d-block" height="50" width="50"
-                                alt="icon" />
-                              抖音
-                            </a>
-                          </div>
-                          <div class="col-6 text-center">
-                            <a href="https://www.coolapk.com/u/1242007" target="_blank">
-                              <img src="images/icon/5.png" class="rounded mx-auto d-block" height="50" width="50"
-                                alt="icon" />
-                              酷安
-                            </a>
-                          </div>
-                          <div class="col-6 text-center">
-                            <a href="https://github.com/jinsexinfeng" target="_blank">
-                              <img src="images/icon/6.png" class="rounded mx-auto d-block" height="50" width="50"
-                                alt="icon" />
-                              Github
-                            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">点不了的链接</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="install" hidden>安装应用</button>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item">
+              <a
+                class="btn bg-my2 text-white btn-round shadow"
+                href="https://jinsexinfeng.github.io"
+                target="_blank"
+              >
+                jinsexinfeng.github.io
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- wavy header -->
+      <div
+        class="jumbotron-my jumbotron-fluid container-fluid d-lg-flex align-items-center justify-content-between text-center pl-lg-5"
+      >
+        <div class="col pt-4 pb-4">
+          <h1 class="display-3 MarginLarge" data-aos="zoom-in">金子博</h1>
+          <h5 class="font-weight-light mb-4" data-aos="fade-up">
+            育英🎈2022🎈计算机网络
+          </h5>
+          <h5 class="font-weight-light mb-4" data-aos="fade-up">
+            📢来啦，快关注我！
+          </h5>
+
+          <!-- Button trigger modal -->
+          <button
+            class="button-my-main"
+            type="button"
+            data-toggle="modal"
+            data-target="#Modal-Contact"
+            data-aos="fade-up"
+          >
+            联系我
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="Modal-Contact"
+            tabindex="-1"
+            aria-labelledby="ModalLabel-Contact-Label"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-body" id="ModalLabel-Contact">
+                    联系方式
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span tabindex="-1">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- 其他网站 -->
+                  <div class="row text-body">
+                    <div class="col-4">
+                      <img
+                        src="images/icon/8.png"
+                        height="60"
+                        width="60"
+                        alt="icon"
+                      />
+                    </div>
+                    <div class="col-8">
+                      QQ<br />
+                      3517860006<br />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="images/icon/9.png"
+                        height="60"
+                        width="60"
+                        alt="icon"
+                      />
+                    </div>
+                    <div class="col-8">
+                      微信<br />
+                      jinsexinfeng-jzb<br />
+                    </div>
+                    <div class="col-12 text-center">
+                      <div class="collapse" id="collapse-more">
+                        <div class="card card-body">
+                          <div class="row">
+                            <div class="col-6 text-center">
+                              <a
+                                href="https://weibo.com/3250150087/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="images/icon/2.png"
+                                  class="rounded mx-auto d-block"
+                                  height="50"
+                                  width="50"
+                                  alt="icon"
+                                />
+                                新浪微博
+                              </a>
+                            </div>
+                            <div class="col-6 text-center">
+                              <a
+                                href="https://v.douyin.com/JVFHYav/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="images/icon/4.png"
+                                  class="rounded mx-auto d-block"
+                                  height="50"
+                                  width="50"
+                                  alt="icon"
+                                />
+                                抖音
+                              </a>
+                            </div>
+                            <div class="col-6 text-center">
+                              <a
+                                href="https://www.coolapk.com/u/1242007"
+                                target="_blank"
+                              >
+                                <img
+                                  src="images/icon/5.png"
+                                  class="rounded mx-auto d-block"
+                                  height="50"
+                                  width="50"
+                                  alt="icon"
+                                />
+                                酷安
+                              </a>
+                            </div>
+                            <div class="col-6 text-center">
+                              <a
+                                href="https://github.com/jinsexinfeng"
+                                target="_blank"
+                              >
+                                <img
+                                  src="images/icon/6.png"
+                                  class="rounded mx-auto d-block"
+                                  height="50"
+                                  width="50"
+                                  alt="icon"
+                                />
+                                Github
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#collapse-more"
-                  aria-expanded="false" aria-controls="collapseExample">
-                  更多联系方式
-                </button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                  关闭
-                </button>
+                <div class="modal-footer">
+                  <button
+                    class="btn btn-outline-info"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapse-more"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                  >
+                    更多联系方式
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    关闭
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="align-self-bottom align-items-right" data-aos="zoom-out">
-          <div id="mainicon">
-            <img src="images/Pic-Au.png" alt="头像" />
+        <div class="col">
+          <div class="align-self-bottom align-items-right" data-aos="zoom-out">
+            <div id="mainicon">
+              <img src="images/Pic-Au.png" alt="头像" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- 新版大波浪 -->
-    <canvas id="jumbotroncanvas"></canvas>
-    <!-- 旧版大波浪 -->
-    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+      <!-- 新版大波浪 -->
+      <canvas id="jumbotroncanvas"></canvas>
+      <!-- 旧版大波浪 -->
+      <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	    viewBox="0 0 1440 118" xml:space="preserve"  fill="var(--my-color2)">
       <path d="M754.4,87.2c266.9,49.9,515.4,28.9,685.6,8.8V0H0v96C187.3,73.8,430,26.6,754.4,87.2z" />
     </svg> -->
-    <div class="container ">
-      <div class="row">
-        <div class="col-12" data-aos="fade-up">
-          <h5 id="hitokoto_text" class="text-center">:D 获取中...</h5>
-        </div>
-        <div class="col-12 col-lg-6 MarginLarge" data-aos="fade-up-right">
-          <h2 id="jsxf-1" class="text-my">自我介绍</h2>
-          <p class="myp">
-            hello，我是来自浙江温州的同学，一名摄影爱好者、白日梦想家，热衷钻研与计算机有关的一切：编程、剪辑、设计、建模……我活波开朗，平易近人，乐于助人，工作仔细，吃苦耐劳，正如大家一样，见到如此多的新面孔，心里激动万分，希望以后能友好相处。
-          </p>
-        </div>
-        <div class="col-12 col-lg-6 MarginLarge overflow-hidden" data-aos="fade-up-left">
-          <div class="row">
-            <!-- #b3d9db -->
-            <div class="col-6 padding-5">
-              <img src="images/jbxx/jbxx-1.png" class="rounded d-block img-right imsize-150" alt="身高" />
-              <div class="TextOnImage">
-                身高<em><small>176cm</small></em>
-              </div>
-            </div>
-
-            <div class="col-6 padding-5">
-              <img src="images/jbxx/jbxx-2.png" class="rounded d-block img-left imsize-150" alt="体重" />
-              <div class="TextOnImage">
-                体重<em><small>58kg</small></em>
-              </div>
-            </div>
-
-            <div class="col-6 padding-5">
-              <img src="images/jbxx/jbxx-3.png" class="rounded d-block img-right imsize-180" alt="生日" />
-              <div class="TextOnImage">
-                生日<em><small>#6-29#</small></em>
-              </div>
-            </div>
-
-            <div class="col-6 padding-5">
-              <img src="images/jbxx/jbxx-4.png" class="rounded d-block img-left imsize-150" alt="家乡" />
-              <div class="TextOnImage">
-                家乡<em><small>温州</small></em>
-              </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12" data-aos="fade-up">
+            <h5 id="hitokoto_text" class="text-center">:D 获取中...</h5>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="col-12 col-lg-6 MarginLarge" data-aos="fade-up-right">
+            <h2 id="jsxf-1" class="text-my">自我介绍</h2>
+            <p class="myp">
+              hello，我是来自浙江温州的同学，一名摄影爱好者、白日梦想家，热衷钻研与计算机有关的一切：编程、剪辑、设计、建模……我活波开朗，平易近人，乐于助人，工作仔细，吃苦耐劳，正如大家一样，见到如此多的新面孔，心里激动万分，希望以后能友好相处。
+            </p>
+          </div>
+          <div
+            class="col-12 col-lg-6 MarginLarge overflow-hidden"
+            data-aos="fade-up-left"
+          >
+            <div class="row">
+              <!-- #b3d9db -->
+              <div class="col-6 padding-5">
+                <img
+                  src="images/jbxx/jbxx-1.png"
+                  class="rounded d-block img-right imsize-150"
+                  alt="身高"
+                />
+                <div class="TextOnImage">
+                  身高<em><small>176cm</small></em>
+                </div>
+              </div>
 
-    <!-- 兴趣爱好 -->
-    <!--background-color:#66aab1-->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	viewbox="0 0 1440 90" xml:space="preserve" x="0px" y="0px" >
-      <g transform="translate(0 0)">
-        <rect width="1440" height="30" transform="translate(0 30)" fill="var(--my-color1)" />
-        <rect width="1440" height="30" transform="translate(0 60)" fill="none" />
-        <rect width="1440" height="30" transform="translate(0 0)" fill="none" />
-      </g>
-    </svg>
-    <div class="jumbotron jumbotron-xl jumbotron-fluid overlay overlay-black mb-0 bg-my2 ">
-      <div class="container h-100">
-        <h2 id="jsxf-2" class="text-white" data-aos="zoom-in-right">
-          兴趣爱好
-        </h2>
-        <div class="row text-center">
-          <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
-            <div class="jcard">
-              <div class="photo"><img src="images/xq/xq1.jpg" alt=""></div>
-              <h1>编程</h1>
-              <p>创造力和逻辑思维的艺术</p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
-            <div class="jcard">
-              <div class="photo"><img src="images/xq/xq2.jpg" alt=""></div>
-              <h1>摄影</h1>
-              <p>捕捉时刻展现情感的方式</p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
-            <div class="jcard">
-              <div class="photo"><img src="images/xq/xq3.jpg" alt=""></div>
-              <h1>美食</h1>
-              <p>开启文化与味觉之旅的门</p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
-            <div class="jcard">
-              <div class="photo"><img src="images/xq/xq4.jpg" alt=""></div>
-              <h1>音乐</h1>
-              <p>超越语言抒发灵魂与情感</p>
+              <div class="col-6 padding-5">
+                <img
+                  src="images/jbxx/jbxx-2.png"
+                  class="rounded d-block img-left imsize-150"
+                  alt="体重"
+                />
+                <div class="TextOnImage">
+                  体重<em><small>58kg</small></em>
+                </div>
+              </div>
+
+              <div class="col-6 padding-5">
+                <img
+                  src="images/jbxx/jbxx-3.png"
+                  class="rounded d-block img-right imsize-180"
+                  alt="生日"
+                />
+                <div class="TextOnImage">
+                  生日<em><small>#6-29#</small></em>
+                </div>
+              </div>
+
+              <div class="col-6 padding-5">
+                <img
+                  src="images/jbxx/jbxx-4.png"
+                  class="rounded d-block img-left imsize-150"
+                  alt="家乡"
+                />
+                <div class="TextOnImage">
+                  家乡<em><small>温州</small></em>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	viewbox="0 0 1440 90" xml:space="preserve" x="0px" y="0px">
-      <g transform="translate(0 0)">
-        <rect width="1440" height="30" transform="translate(0 30)" fill="var(--my-color1)" />
-        <rect width="1440" height="30" transform="translate(0 60)" fill="none" />
-        <rect width="1440" height="30" transform="translate(0 0)" fill="none" />
-      </g>
-    </svg>
 
-    <div class="container ">
-      <div class="col-12 MarginLarge" data-aos="fade-up">
-        <p class="text-center">
-          <a href="xxzl.html" target="_blank"><strong>🥰金色信封的资源库😍</strong></a>
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-sm-12 ">
-          <h2 id="jsxf-3" class="MarginLarge text-my" data-aos="zoom-in-right">
-            个人荣誉
+      <!-- 兴趣爱好 -->
+      <!--background-color:#66aab1-->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewbox="0 0 1440 90"
+        xml:space="preserve"
+        x="0px"
+        y="0px"
+      >
+        <g transform="translate(0 0)">
+          <rect
+            width="1440"
+            height="30"
+            transform="translate(0 30)"
+            fill="var(--my-color1)"
+          />
+          <rect
+            width="1440"
+            height="30"
+            transform="translate(0 60)"
+            fill="none"
+          />
+          <rect
+            width="1440"
+            height="30"
+            transform="translate(0 0)"
+            fill="none"
+          />
+        </g>
+      </svg>
+      <div
+        class="jumbotron jumbotron-xl jumbotron-fluid overlay overlay-black mb-0 bg-my2"
+      >
+        <div class="container h-100">
+          <h2 id="jsxf-2" class="text-white" data-aos="zoom-in-right">
+            兴趣爱好
           </h2>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🔴微电影评比三等奖
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟡市摄影比赛二等奖
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🔵软笔书法比赛三等奖
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟢信息之星和科技之星
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟠工作积极分子
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟡军训标兵
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟢课题研究一等奖
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            ⚪技术考试段一
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟠班容班貌设计二等奖
-          </p>
-          <p class="mb-1" data-aos="zoom-in-right">
-            🟣班级班牌设计一等奖
-          </p>
-        </div>
-        <div class="col-md-6 col-sm-12 ">
-          <h2 id="jsxf-4" class="MarginLarge text-my" data-aos="zoom-in-right">
-            擅长软件
-          </h2>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-              aria-valuemax="100" style="width: 85%" data-aos="fade-right">
-              Office
+          <div class="row text-center">
+            <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
+              <div class="jcard">
+                <div class="photo"><img src="images/xq/xq1.jpg" alt="" /></div>
+                <h1>编程</h1>
+                <p>创造力和逻辑思维的艺术</p>
+              </div>
             </div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-              aria-valuemax="100" style="width: 80%" data-aos="fade-right">
-              Illustrator
+            <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
+              <div class="jcard">
+                <div class="photo"><img src="images/xq/xq2.jpg" alt="" /></div>
+                <h1>摄影</h1>
+                <p>捕捉时刻展现情感的方式</p>
+              </div>
             </div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-              aria-valuemax="100" style="width: 70%" data-aos="fade-right">
-              Visual basic 6.0
+            <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
+              <div class="jcard">
+                <div class="photo"><img src="images/xq/xq3.jpg" alt="" /></div>
+                <h1>美食</h1>
+                <p>开启文化与味觉之旅的门</p>
+              </div>
             </div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-              aria-valuemax="100" style="width: 60%" data-aos="fade-right">
-              Photoshop
-            </div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-              aria-valuemax="100" style="width: 55%" data-aos="fade-right">
-              python
-            </div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-              aria-valuemax="100" style="width: 50%" data-aos="fade-right">
-              剪映
-            </div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-              aria-valuemax="100" style="width: 40%" data-aos="fade-right">
-              SketchUp
+            <div class="col-6 col-lg-3 padding-8" data-aos="zoom-in-up">
+              <div class="jcard">
+                <div class="photo"><img src="images/xq/xq4.jpg" alt="" /></div>
+                <h1>音乐</h1>
+                <p>超越语言抒发灵魂与情感</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid" id="grz1" style="background-image: url(images/grz1.jpg);"></div>
-    <div class="container">
-      <div class="row ">
-        <div class="col-3 PaddingSmall" data-aos="fade-up-right">
-          <svg class="border border-my" width="100%" height="224px" xmlns="http://www.w3.org/2000/svg" style="
-              background-image: url(images/zp/05.jpg);
-              background-position: center center;
-              border-radius: 1.25rem;
-            "></svg>
-          3D建模<br />
-        </div>
-        <div class="col-3 PaddingSmall" data-aos="fade-up">
-          <svg class="border border-my" width="100%" height="224px" xmlns="http://www.w3.org/2000/svg" style="
-              background-image: url(images/zp/01.jpg);
-              background-position: center center;
-              border-radius: 1.25rem;
-            "></svg>
-          班貌设计<br />
-        </div>
-        <div class="col-6 PaddingSmall">
-          <h2 id="jsxf-5" class="text-my" data-aos="fade-left">作品展示</h2>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewbox="0 0 1440 90"
+        xml:space="preserve"
+        x="0px"
+        y="0px"
+      >
+        <g transform="translate(0 0)">
+          <rect
+            width="1440"
+            height="30"
+            transform="translate(0 30)"
+            fill="var(--my-color1)"
+          />
+          <rect
+            width="1440"
+            height="30"
+            transform="translate(0 60)"
+            fill="none"
+          />
+          <rect
+            width="1440"
+            height="30"
+            transform="translate(0 0)"
+            fill="none"
+          />
+        </g>
+      </svg>
 
-          <p class="overflow-auto" style="max-width: 505px; max-height: 185px" data-aos="flip-down">
-            “平日里我喜欢探索数码、科技、编程领域。早在初中，我设计的班级班牌就获得了全校一等奖。我编写过个人网站，访问量达400多次。
-            闲暇时间，我用Visual Basic开发了一些小程序。
-            高一刚接触编程时，我编写了自动抽取姓名的软件，推广到全段；
-            高二寒假时，编写了一个悬浮窗样式的下课提醒倒计时软件。这两个项目在GitHub上开源。
-            我在高三时参与班级班容班貌设计，获得校二等奖。我也尝试使用Python编程，学习基本的数据结构。”
+      <div class="container">
+        <div class="col-12 MarginLarge" data-aos="fade-up">
+          <p class="text-center">
+            <a href="xxzl.html" target="_blank"
+              ><strong>🥰金色信封的资源库😍</strong></a
+            >
           </p>
         </div>
-        <div class="col-3 PaddingSmall" data-aos="fade-up-right">
-          <div class="row">
-            <div class="col-12">
-              <svg class="border border-my" width="100%" height="224px" xmlns="http://www.w3.org/2000/svg" style="
-                  background-image: url(images/zp/02.jpg);
-                  background-position: center center;
-                  border-radius: 1.25rem;
-                "></svg>
-              课题报告<br />
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <h2
+              id="jsxf-3"
+              class="MarginLarge text-my"
+              data-aos="zoom-in-right"
+            >
+              个人荣誉
+            </h2>
+            <p class="mb-1" data-aos="zoom-in-right">🔴微电影评比三等奖</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟡市摄影比赛二等奖</p>
+            <p class="mb-1" data-aos="zoom-in-right">🔵软笔书法比赛三等奖</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟢信息之星和科技之星</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟠工作积极分子</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟡军训标兵</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟢课题研究一等奖</p>
+            <p class="mb-1" data-aos="zoom-in-right">⚪技术考试段一</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟠班容班貌设计二等奖</p>
+            <p class="mb-1" data-aos="zoom-in-right">🟣班级班牌设计一等奖</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2
+              id="jsxf-4"
+              class="MarginLarge text-my"
+              data-aos="zoom-in-right"
+            >
+              擅长软件
+            </h2>
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                aria-valuenow="85"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 85%"
+                data-aos="fade-right"
+              >
+                Office
+              </div>
             </div>
-            <div class="col-12">
-              <svg class="border border-my" width="100%" height="224px" xmlns="http://www.w3.org/2000/svg" style="
-                  background-image: url(images/zp/06.jpg);
-                  background-position: center center;
-                  border-radius: 1.25rem;
-                "></svg>
-              游戏制作<br />
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 80%"
+                data-aos="fade-right"
+              >
+                Illustrator
+              </div>
+            </div>
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 70%"
+                data-aos="fade-right"
+              >
+                Visual basic 6.0
+              </div>
+            </div>
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                aria-valuenow="60"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 60%"
+                data-aos="fade-right"
+              >
+                Photoshop
+              </div>
+            </div>
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-warning"
+                role="progressbar"
+                aria-valuenow="55"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 55%"
+                data-aos="fade-right"
+              >
+                python
+              </div>
+            </div>
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-danger"
+                role="progressbar"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 50%"
+                data-aos="fade-right"
+              >
+                剪映
+              </div>
+            </div>
+            <div class="progress mt-4">
+              <div
+                class="progress-bar bg-danger"
+                role="progressbar"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 40%"
+                data-aos="fade-right"
+              >
+                SketchUp
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-6 PaddingSmall" data-aos="fade-up">
-          <svg class="border border-my" width="100%" height="390px" xmlns="http://www.w3.org/2000/svg" style="
-              background-image: url(images/zp/03.jpg);
-              background-position: center center;
-              border-radius: 1.25rem;
-            "></svg>
-          桌面悬浮窗代码<br />
-        </div>
-        <div class="col-3 PaddingSmall" data-aos="fade-up-left">
-          <svg class="border border-my" width="100%" height="224px" xmlns="http://www.w3.org/2000/svg" style="
-              background-image: url(images/zp/04.jpg);
-              background-position: center center;
-              border-radius: 1.25rem;
-            "></svg>
-          心愿卡设计<br />
-        </div>
       </div>
-    </div>
-    <div class="container">
-      <div class=" col-md-8 col-sm-12 offset-md-2" style="margin-top: 45px; margin-bottom: 45px">
-        <h2 class="text-my" id="jsxf-6" data-aos="fade-left">总结</h2>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="zoom-out">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <picture>
-                <source srcset="images/Au-m-1.PNG" media="(max-width:768px)" />
-                <img class="d-block w-100" src="images/Au-1.PNG" alt="First slide" />
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source srcset="images/Au-m-2.PNG" media="(max-width:768px)" />
-                <img class="d-block w-100" src="images/Au-2.PNG" alt="Second slide" />
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source srcset="images/Au-m-3.PNG" media="(max-width:768px)" />
-                <img class="d-block w-100" src="images/Au-3.PNG" alt="Third slide" />
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source srcset="images/Au-m-4.PNG" media="(max-width:768px)" />
-                <img class="d-block w-100" src="images/Au-4.PNG" alt="Forth slide" />
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source srcset="images/Au-m-5.PNG" media="(max-width:768px)" />
-                <img class="d-block w-100" src="images/Au-5.PNG" alt="Fifth slide" />
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source srcset="images/Au-m-6.PNG" media="(max-width:768px)" />
-                <img class="d-block w-100" src="images/Au-6.PNG" alt="Sixth slide" />
-              </picture>
-            </div>
+      <div
+        class="container-fluid"
+        id="grz1"
+        style="background-image: url(images/grz1.jpg)"
+      ></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3 PaddingSmall" data-aos="fade-up-right">
+            <svg
+              class="border border-my"
+              width="100%"
+              height="224px"
+              xmlns="http://www.w3.org/2000/svg"
+              style="
+                background-image: url(images/zp/05.jpg);
+                background-position: center center;
+                border-radius: 1.25rem;
+              "
+            ></svg>
+            3D建模<br />
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">上一张</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">下一张</span>
-          </a>
-        </div>
-      </div>
+          <div class="col-3 PaddingSmall" data-aos="fade-up">
+            <svg
+              class="border border-my"
+              width="100%"
+              height="224px"
+              xmlns="http://www.w3.org/2000/svg"
+              style="
+                background-image: url(images/zp/01.jpg);
+                background-position: center center;
+                border-radius: 1.25rem;
+              "
+            ></svg>
+            班貌设计<br />
+          </div>
+          <div class="col-6 PaddingSmall">
+            <h2 id="jsxf-5" class="text-my" data-aos="fade-left">作品展示</h2>
 
-      <h2 class="text-my" id="jsxf-7" data-aos="fade-up">好友</h2>
-      <div class="row MarginLarge">
-        <div class="col-md-6 col-sm-12">
-          <div class="row">
-            <div class="col-5" data-aos="zoom-out-left">
-              <h4>男生</h4>
-            </div>
-            <div class="col-6 text-right" data-aos="zoom-out-right">
-              <h5 class="badge badge-secondary bg-my2">♂</h5>
+            <p
+              class="overflow-auto"
+              style="max-width: 505px; max-height: 185px"
+              data-aos="flip-down"
+            >
+              “平日里我喜欢探索数码、科技、编程领域。早在初中，我设计的班级班牌就获得了全校一等奖。我编写过个人网站，访问量达400多次。
+              闲暇时间，我用Visual Basic开发了一些小程序。
+              高一刚接触编程时，我编写了自动抽取姓名的软件，推广到全段；
+              高二寒假时，编写了一个悬浮窗样式的下课提醒倒计时软件。这两个项目在GitHub上开源。
+              我在高三时参与班级班容班貌设计，获得校二等奖。我也尝试使用Python编程，学习基本的数据结构。”
+            </p>
+          </div>
+          <div class="col-3 PaddingSmall" data-aos="fade-up-right">
+            <div class="row">
+              <div class="col-12">
+                <svg
+                  class="border border-my"
+                  width="100%"
+                  height="224px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="
+                    background-image: url(images/zp/02.jpg);
+                    background-position: center center;
+                    border-radius: 1.25rem;
+                  "
+                ></svg>
+                课题报告<br />
+              </div>
+              <div class="col-12">
+                <svg
+                  class="border border-my"
+                  width="100%"
+                  height="224px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="
+                    background-image: url(images/zp/06.jpg);
+                    background-position: center center;
+                    border-radius: 1.25rem;
+                  "
+                ></svg>
+                游戏制作<br />
+              </div>
             </div>
           </div>
-          <ul data-aos="flip-left">
-            <li>Lose Heart : 782749456</li>
-            <!--张含其-->
-            <li>
-              徐C贺啊（<a href="https://v.douyin.com/JVFWaue/">抖音:贺贺不难过</a>） ：2434110886
-            </li>
-            <!--徐晨贺-->
-            <li>
-              惹灼(<a href="https://v.douyin.com/JEXGYhk/">抖音:白黑</a>)
-              ：3090751360
-            </li>
-            <!--杨钰鸣-->
-            <li>晨曦 ：528663914</li>
-            <!--陈明泽-->
-            <li>鸂鶒 ：2741701761</li>
-            <!--陈思炀-->
-            <li>溯. ：634650474</li>
-            <!--张杰磊-->
-            <li>张WS ：2906958331</li>
-            <!--张万松-->
-            <li>★渣男★ ：3210557897</li>
-            <!--詹昕昱-->
-            <li>清寡 ：1374821625</li>
-            <!--骆俊豪-->
-          </ul>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="row">
-            <div class="col-5" data-aos="zoom-out-left">
-              <h4>女生</h4>
-            </div>
-            <div class="col-6 text-right" data-aos="zoom-out-right">
-              <h5 class="badge badge-secondary bg-my2">♀</h5>
-            </div>
+          <div class="col-6 PaddingSmall" data-aos="fade-up">
+            <svg
+              class="border border-my"
+              width="100%"
+              height="390px"
+              xmlns="http://www.w3.org/2000/svg"
+              style="
+                background-image: url(images/zp/03.jpg);
+                background-position: center center;
+                border-radius: 1.25rem;
+              "
+            ></svg>
+            桌面悬浮窗代码<br />
           </div>
-          <ul data-aos="flip-right">
-            <li>Fallinautumn. : 2712467821</li>
-            <!--杨斯琪-->
-            <li>乳鸽汐汐 : 1564298856</li>
-            <!--黄冰冰-->
-            <li>踏月客 : 3120412095</li>
-            <!--林徐明捷-->
-            <li>
-              墨南城(<a href="https://weibo.com/u/6375918003">微博:七米一的南城鸭</a>) : 2568845179
-            </li>
-            <!--周晓露-->
-            <li>Timber : 948195312</li>
-            <!--林洵-->
-            <li>骆本 : 2750512262</li>
-            <!--方译-->
-            <li>孤 : 3040277229</li>
-            <!--童忆晨-->
-          </ul>
+          <div class="col-3 PaddingSmall" data-aos="fade-up-left">
+            <svg
+              class="border border-my"
+              width="100%"
+              height="224px"
+              xmlns="http://www.w3.org/2000/svg"
+              style="
+                background-image: url(images/zp/04.jpg);
+                background-position: center center;
+                border-radius: 1.25rem;
+              "
+            ></svg>
+            心愿卡设计<br />
+          </div>
         </div>
       </div>
+      <div class="container">
+        <div
+          class="col-md-8 col-sm-12 offset-md-2"
+          style="margin-top: 45px; margin-bottom: 45px"
+        >
+          <h2 class="text-my" id="jsxf-6" data-aos="fade-left">总结</h2>
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+            data-aos="zoom-out"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="3"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="4"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="5"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <picture>
+                  <source
+                    srcset="images/Au-m-1.PNG"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    class="d-block w-100"
+                    src="images/Au-1.PNG"
+                    alt="First slide"
+                  />
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture>
+                  <source
+                    srcset="images/Au-m-2.PNG"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    class="d-block w-100"
+                    src="images/Au-2.PNG"
+                    alt="Second slide"
+                  />
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture>
+                  <source
+                    srcset="images/Au-m-3.PNG"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    class="d-block w-100"
+                    src="images/Au-3.PNG"
+                    alt="Third slide"
+                  />
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture>
+                  <source
+                    srcset="images/Au-m-4.PNG"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    class="d-block w-100"
+                    src="images/Au-4.PNG"
+                    alt="Forth slide"
+                  />
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture>
+                  <source
+                    srcset="images/Au-m-5.PNG"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    class="d-block w-100"
+                    src="images/Au-5.PNG"
+                    alt="Fifth slide"
+                  />
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture>
+                  <source
+                    srcset="images/Au-m-6.PNG"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    class="d-block w-100"
+                    src="images/Au-6.PNG"
+                    alt="Sixth slide"
+                  />
+                </picture>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">上一张</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">下一张</span>
+            </a>
+          </div>
+        </div>
 
-      <!--
+        <h2 class="text-my" id="jsxf-7" data-aos="fade-up">好友</h2>
+        <div class="row MarginLarge">
+          <div class="col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-5" data-aos="zoom-out-left">
+                <h4>男生</h4>
+              </div>
+              <div class="col-6 text-right" data-aos="zoom-out-right">
+                <h5 class="badge badge-secondary bg-my2">♂</h5>
+              </div>
+            </div>
+            <ul data-aos="flip-left">
+              <li>Lose Heart : 782749456</li>
+              <!--张含其-->
+              <li>
+                徐C贺啊（<a href="https://v.douyin.com/JVFWaue/"
+                  >抖音:贺贺不难过</a
+                >） ：2434110886
+              </li>
+              <!--徐晨贺-->
+              <li>
+                惹灼(<a href="https://v.douyin.com/JEXGYhk/">抖音:白黑</a>)
+                ：3090751360
+              </li>
+              <!--杨钰鸣-->
+              <li>晨曦 ：528663914</li>
+              <!--陈明泽-->
+              <li>鸂鶒 ：2741701761</li>
+              <!--陈思炀-->
+              <li>溯. ：634650474</li>
+              <!--张杰磊-->
+              <li>张WS ：2906958331</li>
+              <!--张万松-->
+              <li>★渣男★ ：3210557897</li>
+              <!--詹昕昱-->
+              <li>清寡 ：1374821625</li>
+              <!--骆俊豪-->
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-5" data-aos="zoom-out-left">
+                <h4>女生</h4>
+              </div>
+              <div class="col-6 text-right" data-aos="zoom-out-right">
+                <h5 class="badge badge-secondary bg-my2">♀</h5>
+              </div>
+            </div>
+            <ul data-aos="flip-right">
+              <li>Fallinautumn. : 2712467821</li>
+              <!--杨斯琪-->
+              <li>乳鸽汐汐 : 1564298856</li>
+              <!--黄冰冰-->
+              <li>踏月客 : 3120412095</li>
+              <!--林徐明捷-->
+              <li>
+                墨南城(<a href="https://weibo.com/u/6375918003"
+                  >微博:七米一的南城鸭</a
+                >) : 2568845179
+              </li>
+              <!--周晓露-->
+              <li>Timber : 948195312</li>
+              <!--林洵-->
+              <li>骆本 : 2750512262</li>
+              <!--方译-->
+              <li>孤 : 3040277229</li>
+              <!--童忆晨-->
+            </ul>
+          </div>
+        </div>
+
+        <!--
       <h2>Fun Facts</h2>
       <div class="row text-center">
         <div class="col-6 col-lg-3">
@@ -624,7 +1021,7 @@
         </div>
       </div>
     -->
-      <!--
+        <!--
       <hr>
       <h2>Contact</h2>
       <hr>
@@ -654,200 +1051,226 @@
         </div>
       </div>
     -->
-      <hr />
-      <footer class="text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <p>Copyright © jinsexinfeng. All rights reserved.</p>
+        <hr />
+        <footer class="text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p>Copyright © jinsexinfeng. All rights reserved.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
-  </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/popper.min.js"></script>
-  <!-- aos.js -->
-  <script src="js/aos.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <!-- aos.js -->
+    <script src="js/aos.js"></script>
 
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script>
+      var ishide = false;
+      document
+        .getElementById("hideButton")
+        .addEventListener("click", function () {
+          document.getElementById("loading").style.display = "none";
+          // 进入动画
+          AOS.init({
+            duration: 800,
+            disableMutationObserver: true,
+          });
+          ishide = true;
+        });
 
-  <script src="js/bootstrap-4.4.1.js"></script>
-  <script>
-    // 导航改色
-    jQuery(document).ready(function () {
-      $(window).scroll(function () {
-        $(".topnav").toggleClass(
-          // "bg-light navbar-light shadow-sm scrollednav py-0",
-          "bg-h-my navbar-light shadow-sm scrollednav",
-          $(this).scrollTop() >= 50
-        );
-        $(".topnav").toggleClass(
-          "bg-my navbar-dark",
-          $(this).scrollTop() < 50
-        );
+      // 等待DOM加载完成后再执行关闭操作
+      document.onreadystatechange = function () {
+        //即在加载的过程中执行下面的代码
+        if (document.readyState == "complete") {
+          //complete加载完成
+          setTimeout(() => {
+            if (!ishide) {
+              document.getElementById("loading").style.display = "none";
+              // 进入动画
+              AOS.init({
+                duration: 800,
+                disableMutationObserver: true,
+              });
+            }
+          }, 500);
+        }
+      };
+    </script>
+    <script>
+      // 导航改色
+      jQuery(document).ready(function () {
+        $(window).scroll(function () {
+          $(".topnav").toggleClass(
+            // "bg-light navbar-light shadow-sm scrollednav py-0",
+            "bg-h-my navbar-light shadow-sm scrollednav",
+            $(this).scrollTop() >= 50
+          );
+          $(".topnav").toggleClass(
+            "bg-my navbar-dark",
+            $(this).scrollTop() < 50
+          );
+        });
       });
-    });
-  </script>
-  <script>
-    window.addEventListener('resize', () => {
-      const navbar = document.getElementById('navbar');
+    </script>
+    <script>
+      window.addEventListener("resize", () => {
+        const navbar = document.getElementById("navbar");
+        const pageWidth = window.innerWidth;
+        navbar.style.width = `${pageWidth}px`;
+      });
+
+      // 初始化时设置#navbar的宽度
+      const navbar = document.getElementById("navbar");
       const pageWidth = window.innerWidth;
       navbar.style.width = `${pageWidth}px`;
-    });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // 点击导航链接时触发滚动动画
+        $(".dropdown-item").click(function (e) {
+          e.preventDefault();
+          var targetSection = $($(this).attr("href"));
 
-    // 初始化时设置#navbar的宽度
-    const navbar = document.getElementById('navbar');
-    const pageWidth = window.innerWidth;
-    navbar.style.width = `${pageWidth}px`;
-  </script>
-  <script>
-    $(document).ready(function () {
-      // 点击导航链接时触发滚动动画
-      $(".dropdown-item").click(function (e) {
-        e.preventDefault();
-        var targetSection = $($(this).attr("href"));
-
-        // 计算目标section距离顶部的距离，并减去导航栏高度
-        var targetSectionTop = targetSection.offset().top - 70;
-        $("html, body").animate(
-          {
-            scrollTop: targetSectionTop,
-          },
-          1000
-        );
-        closenavbar();
+          // 计算目标section距离顶部的距离，并减去导航栏高度
+          var targetSectionTop = targetSection.offset().top - 70;
+          $("html, body").animate(
+            {
+              scrollTop: targetSectionTop,
+            },
+            1000
+          );
+          closenavbar();
+        });
       });
-    });
-    function closenavbar() {
-      var button = document.getElementById("collapse");
-      var ariaExpanded = button.getAttribute("aria-expanded");
+      function closenavbar() {
+        var button = document.getElementById("collapse");
+        var ariaExpanded = button.getAttribute("aria-expanded");
 
-      if (ariaExpanded === "true") {
-        button.classList.add("collapsed");
-        document.getElementById("mynavbar").classList.remove("show");
-        button.setAttribute("aria-expanded", "false");
+        if (ariaExpanded === "true") {
+          button.classList.add("collapsed");
+          document.getElementById("mynavbar").classList.remove("show");
+          button.setAttribute("aria-expanded", "false");
+        }
       }
-    }
-  </script>
-  <script>
-    // 每日一句
-    fetch("https://v1.hitokoto.cn")
-      .then((response) => response.json())
-      .then((data) => {
-        const hitokoto = document.getElementById("hitokoto_text");
-        hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        hitokoto.innerText = data.hitokoto;
-      })
-      .catch(console.error);
-  </script>
-  <script>
-    // 大波浪
-    var canvas = document.getElementById("jumbotroncanvas");
-    const style = window.getComputedStyle(canvas);
-    const bgColor1 =
-      style.getPropertyValue("--darkreader-bg--my-color1") ||
-      style.getPropertyValue("--my-color1");
-    const bgColor2 =
-      style.getPropertyValue("--darkreader-bg--my-color2") ||
-      style.getPropertyValue("--my-color2");
-    var ctx = canvas.getContext("2d");
-    var _width = (canvas.width = canvas.offsetWidth);
-    var _height = (canvas.height = canvas.offsetHeight);
-    var leftDot = (rightDot = _height * 0.7); //起始点和终点高度
-    var leftDotSpeed = 0.2;
-    var rightDotSpeed = 0.16;
-    var n = 0;
-    window.requestAnimationFrame =
-      window.requestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.msRequestAnimationFrame;
+    </script>
+    <script>
+      // 每日一句
+      fetch("https://v1.hitokoto.cn")
+        .then((response) => response.json())
+        .then((data) => {
+          const hitokoto = document.getElementById("hitokoto_text");
+          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+          hitokoto.innerText = data.hitokoto;
+        })
+        .catch(console.error);
+    </script>
+    <script>
+      // 大波浪
+      var canvas = document.getElementById("jumbotroncanvas");
+      const style = window.getComputedStyle(canvas);
+      const bgColor1 =
+        style.getPropertyValue("--darkreader-bg--my-color1") ||
+        style.getPropertyValue("--my-color1");
+      const bgColor2 =
+        style.getPropertyValue("--darkreader-bg--my-color2") ||
+        style.getPropertyValue("--my-color2");
+      var ctx = canvas.getContext("2d");
+      var _width = (canvas.width = canvas.offsetWidth);
+      var _height = (canvas.height = canvas.offsetHeight);
+      var leftDot = (rightDot = _height * 0.7); //起始点和终点高度
+      var leftDotSpeed = 0.2;
+      var rightDotSpeed = 0.16;
+      var n = 0;
+      window.requestAnimationFrame =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
 
-    run();
+      run();
 
-    function drawWater(n, color, leftDot, rightDot) {
-      var angle = (n * Math.PI) / 180;
-      var deltaHeight = (Math.sin(angle) * _height) / 8;
-      var deltaHeightRight = (Math.cos(angle) * _height) / 7;
-      ctx.beginPath();
-      ctx.moveTo(0, leftDot);
-      ctx.bezierCurveTo(
-        _width / 4,
-        leftDot + deltaHeight,
-        (_width * 3) / 4,
-        rightDot + deltaHeightRight,
-        _width,
-        rightDot
-      );
-      ctx.lineTo(_width, _height);
-      ctx.lineTo(0, _height); //使得下半个矩形闭合
-      ctx.fillStyle = color;
-      ctx.fill();
-    }
-    function run() {
-      ctx.clearRect(0, 0, _width, _height);
-      n += 1;
-      leftDot += leftDotSpeed;
-      rightDot += rightDotSpeed;
-      if (leftDot > _height * 0.8 || leftDot < _height * 0.6) {
-        leftDotSpeed *= -1;
+      function drawWater(n, color, leftDot, rightDot) {
+        var angle = (n * Math.PI) / 180;
+        var deltaHeight = (Math.sin(angle) * _height) / 8;
+        var deltaHeightRight = (Math.cos(angle) * _height) / 7;
+        ctx.beginPath();
+        ctx.moveTo(0, leftDot);
+        ctx.bezierCurveTo(
+          _width / 4,
+          leftDot + deltaHeight,
+          (_width * 3) / 4,
+          rightDot + deltaHeightRight,
+          _width,
+          rightDot
+        );
+        ctx.lineTo(_width, _height);
+        ctx.lineTo(0, _height); //使得下半个矩形闭合
+        ctx.fillStyle = color;
+        ctx.fill();
       }
-      if (rightDot > _height * 0.8 || rightDot < _height * 0.6) {
-        rightDotSpeed *= -1;
+      function run() {
+        ctx.clearRect(0, 0, _width, _height);
+        n += 1;
+        leftDot += leftDotSpeed;
+        rightDot += rightDotSpeed;
+        if (leftDot > _height * 0.8 || leftDot < _height * 0.6) {
+          leftDotSpeed *= -1;
+        }
+        if (rightDot > _height * 0.8 || rightDot < _height * 0.6) {
+          rightDotSpeed *= -1;
+        }
+        drawWater(n + 200, bgColor1, leftDot, rightDot);
+        drawWater(n, bgColor2, leftDot, rightDot);
+        requestAnimationFrame(run);
       }
-      drawWater(n + 200, bgColor1, leftDot, rightDot);
-      drawWater(n, bgColor2, leftDot, rightDot);
-      requestAnimationFrame(run);
-    }
-  </script>
-  <script>
-    // 监听暗色、亮色切换
-    let lightMedia = window.matchMedia('(prefers-color-scheme: light)');
-    let darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
-    let callback = (e) => {
-      let prefersDarkMode = e.matches;
-      if (prefersDarkMode) {
-        window.location.reload();
+    </script>
+    <script>
+      // 监听暗色、亮色切换
+      let lightMedia = window.matchMedia("(prefers-color-scheme: light)");
+      let darkMedia = window.matchMedia("(prefers-color-scheme: dark)");
+      let callback = (e) => {
+        let prefersDarkMode = e.matches;
+        if (prefersDarkMode) {
+          window.location.reload();
+        }
+      };
+      if (
+        typeof darkMedia.addEventListener === "function" ||
+        typeof lightMedia.addEventListener === "function"
+      ) {
+        lightMedia.addEventListener("change", callback);
+        darkMedia.addEventListener("change", callback);
       }
-    };
-    if (typeof darkMedia.addEventListener === 'function' || typeof lightMedia.addEventListener === 'function') {
-      lightMedia.addEventListener('change', callback);
-      darkMedia.addEventListener('change', callback);
-    }
-  </script>
-  <script>
-    // 进入动画
-    AOS.init({
-      duration: 800,
-      disableMutationObserver: true,
-    });
-  </script>
-  <script>
-    let installPrompt = null;
-    const installButton = document.querySelector("#install");
+    </script>
+    <script>
+      let installPrompt = null;
+      const installButton = document.querySelector("#install");
 
-    window.addEventListener("beforeinstallprompt", (event) => {
-      event.preventDefault();
-      installPrompt = event;
-      installButton.removeAttribute("hidden");
-    });
-    installButton.addEventListener("click", async () => {
-      if (!installPrompt) {
-        return;
+      window.addEventListener("beforeinstallprompt", (event) => {
+        event.preventDefault();
+        installPrompt = event;
+        installButton.removeAttribute("hidden");
+      });
+      installButton.addEventListener("click", async () => {
+        if (!installPrompt) {
+          return;
+        }
+        const result = await installPrompt.prompt();
+        console.log(`Install prompt was: ${result.outcome}`);
+        disableInAppInstallPrompt();
+      });
+
+      function disableInAppInstallPrompt() {
+        installPrompt = null;
+        installButton.setAttribute("hidden", "");
       }
-      const result = await installPrompt.prompt();
-      console.log(`Install prompt was: ${result.outcome}`);
-      disableInAppInstallPrompt();
-    });
-
-    function disableInAppInstallPrompt() {
-      installPrompt = null;
-      installButton.setAttribute("hidden", "");
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

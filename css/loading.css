@@ -1,0 +1,147 @@
+:root {
+  --my-color2: #386783;
+  --my-color1: #66aab1;
+}
+@media(prefers-color-scheme: dark){
+  :root {
+    --my-color2: #244254;
+    --my-color1: #40787e;
+  }
+}
+#loading {
+  background-color: var(--my-color2);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2999;
+  margin-top: 0px;
+  top: 0px;
+  left: 0px;
+}
+
+#loading-center {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2999;
+  text-align: center;
+}
+
+#loading-center .object {
+  -moz-border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  border-left: 8px solid #fff;
+  border-right: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  -webkit-animation: animate 4s infinite;
+  animation: animate 4s infinite;
+}
+
+#loading-center #object_one {
+  left: -85px;
+  top: -85px;
+  width: 350px;
+  height: 350px;
+}
+
+#loading-center #object_two {
+  left: -105px;
+  top: -105px;
+  width: 390px;
+  height: 390px;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+#loading-center #object_three {
+  left: -125px;
+  top: -125px;
+  width: 430px;
+  height: 430px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#loading-center #object_four {
+  left: -145px;
+  top: -145px;
+  width: 470px;
+  height: 470px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+@-webkit-keyframes animate {
+  50% {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animate {
+  50% {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+#logo .cls-1 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 8;
+  stroke-width: 6px;
+  stroke-dashoffset: 0;
+}
+
+#logo .cls-2 {
+  stroke-width: 0px;
+  fill: #fff;
+}
+
+#loading #hideButton {
+  text-align: center;
+  bottom: 10%;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--my-color1);
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.8;
+  font-family: revert;
+}
+#loading #hideButton:hover {
+  opacity: 0.9;
+}
