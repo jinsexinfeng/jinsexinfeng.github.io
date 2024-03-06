@@ -99,7 +99,7 @@
           </svg>
         </div>
       </div>
-      <button id="hideButton"><span tabindex="-1">&times;</span></button>
+      <button type="button" id="hideButton" style="display: none;"><span tabindex="-1">&times;</span></button>
     </div>
     <!--正文-->
     <div style="overflow-x: hidden">
@@ -1089,6 +1089,11 @@
       // 等待DOM加载完成后再执行关闭操作
       document.onreadystatechange = function () {
         //即在加载的过程中执行下面的代码
+        if (document.readyState == "interactive") {
+          // 显示按钮
+          const hideButton = document.getElementById("hideButton");
+          hideButton.style.display = "inline-block";
+        }
         if (document.readyState == "complete") {
           //complete加载完成
           setTimeout(() => {
