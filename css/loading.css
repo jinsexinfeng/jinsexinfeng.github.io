@@ -2,12 +2,18 @@
   --my-color2: #386783;
   --my-color1: #66aab1;
 }
-@media(prefers-color-scheme: dark){
+
+@media (prefers-color-scheme: dark) {
   :root {
     --my-color2: #244254;
     --my-color1: #40787e;
   }
 }
+
+.overhidden {
+  overflow: hidden;
+}
+
 #loading {
   background-color: var(--my-color2);
   height: 100%;
@@ -142,6 +148,7 @@
   opacity: 0.8;
   font-family: revert;
 }
+
 #loading #hideButton:hover {
   opacity: 0.9;
 }
