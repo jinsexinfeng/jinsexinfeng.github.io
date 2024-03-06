@@ -53,7 +53,7 @@
     </script>
   </head>
 
-  <body>
+  <body style="overflow: hidden;">
     <!--加载-->
     <div id="loading">
       <div id="loading-center">
@@ -1076,6 +1076,7 @@
       document
         .getElementById("hideButton")
         .addEventListener("click", function () {
+          $('body').css('overflow','auto');
           document.getElementById("loading").style.display = "none";
           // 进入动画
           AOS.init({
@@ -1092,6 +1093,7 @@
           //complete加载完成
           setTimeout(() => {
             if (!ishide) {
+              $('body').css('overflow','auto');
               document.getElementById("loading").style.display = "none";
               // 进入动画
               AOS.init({
